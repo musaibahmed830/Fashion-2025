@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'StyleVogue Editorial Team' }],
   creator: 'StyleVogue',
   publisher: 'StyleVogue',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   formatDetection: {
     email: false,
     address: false,
