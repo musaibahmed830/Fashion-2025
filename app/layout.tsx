@@ -1,0 +1,72 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: {
+    default: 'StyleVogue - Premier Fashion Trends & Style Guide 2025',
+    template: '%s | StyleVogue'
+  },
+  description: 'StyleVogue: Your premier destination for the latest fashion trends, expert style tips, and wardrobe essentials in 2025. Discover top fashion trends, sustainable style, celebrity fashion inspiration, and professional styling advice.',
+  keywords: ['StyleVogue', 'fashion trends 2025', 'style guide', 'fashion blog', 'wardrobe essentials', 'sustainable fashion', 'celebrity style', 'fashion tips', 'style inspiration', 'fashion trends', 'style advice'],
+  authors: [{ name: 'StyleVogue Editorial Team' }],
+  creator: 'StyleVogue',
+  publisher: 'StyleVogue',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://stylevogue.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://stylevogue.com',
+    siteName: 'StyleVogue',
+    title: 'StyleVogue - Premier Fashion Trends & Style Guide 2025',
+    description: 'Discover the latest fashion trends, style tips, and wardrobe essentials for 2025',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'StyleVogue - Premier Fashion Trends & Style Tips',
+    description: 'Your ultimate guide to staying stylish in 2025',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  )
+}
+
+
