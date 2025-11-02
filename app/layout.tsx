@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import Header from '@/components/Header'
@@ -51,6 +50,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    'google-adsense-account': 'ca-pub-7553854040895862',
+  },
 }
 
 export default function RootLayout({
@@ -61,12 +63,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7553854040895862"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <Header />
         <main className="min-h-screen">
           {children}
