@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,7 +7,20 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="animate-slide-in-left">
-            <h3 className="text-2xl font-bold mb-4 gradient-text">StyleVogue</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/logo.png"
+                  alt="StyleVogue Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="text-xl font-bold gradient-text">StyleVogue</h3>
+                <span className="text-xs text-gray-400">Where Fashion Meets Elegance</span>
+              </div>
+            </div>
             <p className="text-gray-400 leading-relaxed">
               Your premier destination for the latest fashion trends, expert style tips, and wardrobe essentials for 2025.
             </p>

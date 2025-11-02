@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Header() {
@@ -12,9 +13,25 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="text-3xl font-bold gradient-text animate-scale-in hover:scale-105 transition-transform"
+            className="flex items-center gap-3 animate-scale-in hover:scale-105 transition-transform group"
           >
-            StyleVogue
+            <div className="relative w-12 h-12 md:w-16 md:h-16">
+              <Image
+                src="/logo.png"
+                alt="StyleVogue Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl md:text-3xl font-bold gradient-text">
+                StyleVogue
+              </span>
+              <span className="text-xs md:text-sm text-gray-500 font-medium">
+                Where Fashion Meets Elegance
+              </span>
+            </div>
           </Link>
           <ul className="hidden md:flex gap-6 items-center">
             <li className="animate-slide-in-right stagger-1">
