@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import Header from '@/components/Header'
@@ -60,6 +61,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7553854040895862"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Header />
         <main className="min-h-screen">
           {children}
