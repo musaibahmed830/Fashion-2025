@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'All Fashion Posts - Style Guides & Trends | StyleVogue',
-  description: 'Browse all fashion posts covering the latest trends, style tips, wardrobe essentials, sustainable fashion, and celebrity style inspiration for 2025.',
+  description: 'Browse all fashion posts covering the latest trends, style tips, wardrobe essentials, sustainable fashion, and celebrity style inspiration for 2026.',
   keywords: 'fashion posts, style guides, fashion articles, wardrobe tips, fashion trends',
 }
 
@@ -32,7 +32,7 @@ export default function FashionPage() {
             All <span className="gradient-text">Fashion Posts</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our complete collection of fashion articles, style guides, and trend reports covering everything you need to stay stylish in 2025.
+            Explore our complete collection of fashion articles, style guides, and trend reports covering everything you need to stay stylish in 2026.
           </p>
         </div>
 

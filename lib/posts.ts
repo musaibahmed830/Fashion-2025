@@ -14,14 +14,14 @@ export interface BlogPost {
 export const fashionPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'Winter Fashion Trends 2025: Cozy & Chic Essentials',
-    slug: 'winter-fashion-trends-2025',
+    title: 'Winter Fashion Trends 2026: Cozy & Chic Essentials',
+    slug: 'winter-fashion-trends-2026',
     excerpt: 'Discover the must-have winter fashion pieces that combine warmth with style. From oversized coats to statement boots, this season is all about comfort meets elegance.',
-    content: `# Winter Fashion Trends 2025: Cozy & Chic Essentials
+    content: `# Winter Fashion Trends 2026: Cozy & Chic Essentials
 
-The winter of 2025 brings a refreshing approach to cold-weather fashion, blending comfort with sophisticated style. This season, fashion enthusiasts are embracing oversized silhouettes, rich textures, and statement accessories that make a bold impact.
+The winter of 2026 brings a refreshing approach to cold-weather fashion, blending comfort with sophisticated style. This season, fashion enthusiasts are embracing oversized silhouettes, rich textures, and statement accessories that make a bold impact.
 
-## Key Trends for Winter 2025
+## Key Trends for Winter 2026
 
 ### 1. Oversized Coats
 Oversized coats have become the ultimate winter staple. Think floor-length wool coats in neutral tones like camel, black, and charcoal. These pieces provide both warmth and an effortlessly chic look.
@@ -46,9 +46,9 @@ Oversized scarves are back in a big way. Whether in cashmere or wool, a statemen
 
 This winter, embrace the comfort-first mentality while maintaining your unique style identity.`,
     category: 'Trending',
-    date: 'December 15, 2024',
+    date: 'December 15, 2025',
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800',
-    keywords: ['winter fashion', 'fashion trends 2025', 'winter wardrobe', 'cozy style'],
+      keywords: ['winter fashion', 'fashion trends 2026', 'winter wardrobe', 'cozy style'],
     trending: true
   },
   {
@@ -95,7 +95,7 @@ Proper care extends the life of your garments. Follow washing instructions, repa
 
 Building a sustainable wardrobe is a journey, not a destination. Start with small changes and gradually build a collection that reflects your values and style.`,
     category: 'Sustainable',
-    date: 'December 12, 2024',
+    date: 'December 12, 2025',
     image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800',
     keywords: ['sustainable fashion', 'eco-friendly wardrobe', 'ethical fashion', 'green fashion'],
     trending: true
@@ -135,7 +135,7 @@ Protect your eyes while adding a chic touch. Classic shapes like aviators, cat-e
 
 Accessories are where you can express your personality and creativity. Experiment with different combinations to find what works best for you.`,
     category: 'Accessories',
-    date: 'December 10, 2024',
+    date: 'December 10, 2025',
     image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800',
     keywords: ['accessories', 'jewelry', 'handbags', 'fashion accessories'],
     trending: true
@@ -203,7 +203,7 @@ Ensure all pieces can work together to create multiple outfits.
 
 A minimalist wardrobe is about intentional choices and finding pieces that truly represent your style.`,
     category: 'Wardrobe Essentials',
-    date: 'December 8, 2024',
+    date: 'December 8, 2025',
     image: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=800',
     keywords: ['minimalist wardrobe', 'capsule wardrobe', 'wardrobe essentials', 'minimalist fashion'],
     trending: false
@@ -256,21 +256,21 @@ Wearing different shades of the same color creates a sophisticated, put-together
 
 Remember, inspiration is about finding elements that resonate with you, not copying looks exactly. Use celebrity style as a starting point to develop your unique fashion sense.`,
     category: 'Style Tips',
-    date: 'December 5, 2024',
+    date: 'November 5, 2025',
     image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800',
     keywords: ['celebrity style', 'red carpet fashion', 'street style', 'fashion inspiration'],
     trending: true
   },
   {
     id: '6',
-    title: 'Spring 2025 Fashion Trends: Fresh Colors and Bold Patterns',
-    slug: 'spring-2025-fashion-trends',
-    excerpt: 'Explore the hottest spring 2025 fashion trends featuring vibrant colors, floral prints, and lightweight fabrics perfect for the warmer months ahead.',
-    content: `# Spring 2025 Fashion Trends: Fresh Colors and Bold Patterns
+    title: 'Spring 2026 Fashion Trends: Fresh Colors and Bold Patterns',
+    slug: 'spring-2026-fashion-trends',
+    excerpt: 'Explore the hottest spring 2026 fashion trends featuring vibrant colors, floral prints, and lightweight fabrics perfect for the warmer months ahead.',
+    content: `# Spring 2026 Fashion Trends: Fresh Colors and Bold Patterns
 
-As we transition from winter to spring, fashion takes a refreshing turn with lighter fabrics, brighter colors, and patterns that celebrate renewal. Spring 2025 brings an exciting mix of classic elegance and bold experimentation.
+As we transition from winter to spring, fashion takes a refreshing turn with lighter fabrics, brighter colors, and patterns that celebrate renewal. Spring 2026 brings an exciting mix of classic elegance and bold experimentation.
 
-## Top Spring 2025 Trends
+## Top Spring 2026 Trends
 
 ### 1. Pastel Palette
 Soft pastels are making a major comeback this spring. Think lavender, mint green, baby blue, and blush pink. These gentle hues create a fresh, feminine look that's perfect for daytime wear.
@@ -296,9 +296,9 @@ Open-toe sandals with delicate straps are the must-have spring footwear. They pa
 
 Spring fashion is all about embracing new beginnings with style. Let these trends inspire your seasonal wardrobe refresh.`,
     category: 'Trending',
-    date: 'December 3, 2024',
+    date: 'November 15, 2025',
     image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800',
-    keywords: ['spring fashion', 'fashion trends 2025', 'spring wardrobe', 'pastel fashion'],
+      keywords: ['spring fashion', 'fashion trends 2026', 'spring wardrobe', 'pastel fashion'],
     trending: true
   },
   {
@@ -357,7 +357,7 @@ Invest in quality leather accessories:
 
 A professional wardrobe is about quality over quantity. Start with these basics and build from there.`,
     category: 'Style Tips',
-    date: 'December 1, 2024',
+    date: 'November 10, 2025',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800',
     keywords: ['professional wardrobe', 'work attire', 'business fashion', 'office style'],
     trending: false
@@ -428,7 +428,7 @@ Finding the right fit is crucial:
 
 Denim is no longer just casual wear—it's a fashion statement that can adapt to any setting with the right styling.`,
     category: 'Trending',
-    date: 'November 28, 2024',
+    date: 'November 25, 2025',
     image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=800',
     keywords: ['denim fashion', 'jeans styling', 'casual fashion', 'denim trends'],
     trending: true
@@ -498,7 +498,7 @@ Build a base of neutrals and add colorful accessories or statement pieces for in
 
 Understanding color psychology and your personal best colors can elevate your style and boost your confidence in any situation.`,
     category: 'Style Tips',
-    date: 'November 25, 2024',
+    date: 'November 20, 2025',
     image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800',
     keywords: ['color psychology', 'fashion colors', 'wardrobe colors', 'color analysis'],
     trending: false
@@ -579,7 +579,7 @@ Vintage pieces may need alterations to fit modern bodies and preferences. A good
 
 Vintage fashion allows you to create a truly unique style while embracing sustainability and quality. Start small and build your vintage collection gradually.`,
     category: 'Trending',
-    date: 'November 22, 2024',
+    date: 'November 18, 2025',
     image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800',
     keywords: ['vintage fashion', 'retro style', 'thrift fashion', 'sustainable fashion'],
     trending: true

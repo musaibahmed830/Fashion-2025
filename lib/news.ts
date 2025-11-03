@@ -26,7 +26,7 @@ export async function getLatestTrendNews(): Promise<TrendNews[]> {
   const news: TrendNews[] = [
     {
       id: `news-${today}-1`,
-      title: 'Spring 2025 Fashion Week Highlights: Bold Colors Take Center Stage',
+      title: 'Spring 2026 Fashion Week Highlights: Bold Colors Take Center Stage',
       excerpt: 'Major fashion houses showcased vibrant palettes and innovative designs during the recent fashion weeks in Paris, Milan, and New York.',
       source: 'Fashion Forward',
       date: today,
@@ -35,7 +35,7 @@ export async function getLatestTrendNews(): Promise<TrendNews[]> {
     },
     {
       id: `news-${today}-2`,
-      title: 'Sustainable Fashion Brands See Record Growth in 2025',
+      title: 'Sustainable Fashion Brands See Record Growth in 2026',
       excerpt: 'Eco-conscious consumers are driving a 40% increase in sustainable fashion sales, with major retailers expanding their ethical collections.',
       source: 'Style Report',
       date: today,
@@ -44,7 +44,7 @@ export async function getLatestTrendNews(): Promise<TrendNews[]> {
     },
     {
       id: `news-${today}-3`,
-      title: 'Celebrity Stylists Reveal Top Wardrobe Essentials for 2025',
+      title: 'Celebrity Stylists Reveal Top Wardrobe Essentials for 2026',
       excerpt: 'Leading celebrity stylists share the must-have pieces that will define fashion trends for the coming year.',
       source: 'Celebrity Style',
       date: today,
@@ -63,7 +63,7 @@ export async function getLatestTrendNews(): Promise<TrendNews[]> {
     {
       id: `news-${today}-5`,
       title: 'Vintage Fashion Continues to Dominate Street Style',
-      excerpt: 'From thrift store finds to designer vintage pieces, retro fashion remains one of the hottest trends in 2025.',
+      excerpt: 'From thrift store finds to designer vintage pieces, retro fashion remains one of the hottest trends in 2026.',
       source: 'Street Style',
       date: today,
       category: 'Trending',

@@ -5,12 +5,12 @@ import { Metadata } from 'next'
 import LatestTrendNews from '@/components/LatestTrendNews'
 
 export const metadata: Metadata = {
-  title: 'StyleVogue - Premier Fashion Trends & Style Guide 2025',
-  description: 'StyleVogue: Discover the hottest fashion trends, expert style tips, and wardrobe essentials for 2025. Your premier guide to staying stylish with sustainable fashion, celebrity inspiration, and seasonal trends.',
-  keywords: 'StyleVogue, fashion trends 2025, style guide, fashion blog, wardrobe essentials, sustainable fashion, celebrity style, fashion tips, style inspiration',
+  title: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
+  description: 'StyleVogue: Discover the hottest fashion trends, expert style tips, and wardrobe essentials for 2026. Your premier guide to staying stylish with sustainable fashion, celebrity inspiration, and seasonal trends.',
+  keywords: 'StyleVogue, fashion trends 2026, style guide, fashion blog, wardrobe essentials, sustainable fashion, celebrity style, fashion tips, style inspiration',
   openGraph: {
-    title: 'StyleVogue - Premier Fashion Trends & Style Guide 2025',
-    description: 'Discover the hottest fashion trends, style tips, and wardrobe essentials for 2025',
+    title: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
+    description: 'Discover the hottest fashion trends, style tips, and wardrobe essentials for 2026',
     type: 'website',
   },
 }
@@ -27,7 +27,7 @@ export default async function Home() {
     '@context': 'https://schema.org',
     '@type': 'Blog',
     name: 'StyleVogue',
-    description: 'Premier destination for latest fashion trends, expert style tips, and wardrobe essentials for 2025',
+    description: 'Premier destination for latest fashion trends, expert style tips, and wardrobe essentials for 2026',
     url: 'https://stylevogue.com',
     publisher: {
       '@type': 'Organization',
@@ -53,8 +53,8 @@ export default async function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-slide-in-left">
-              Discover Your Style in <span className="text-yellow-300">2025</span>
-        </h1>
+              Discover Your Style in <span className="text-yellow-300">2026</span>
+            </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed animate-slide-in-right">
               Your ultimate fashion destination for the latest trends, expert style tips, and wardrobe essentials. Transform your look with confidence.
             </p>
@@ -349,7 +349,7 @@ export default async function Home() {
             <div className="text-center mb-12">
               <span className="text-pink-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Your Resource</span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Complete Fashion Guide for <span className="gradient-text">2025</span>
+                Complete Fashion Guide for <span className="gradient-text">2026</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -387,7 +387,7 @@ export default async function Home() {
                 At StyleVogue, we're committed to bringing you the most comprehensive fashion content covering everything from seasonal trends to sustainable fashion practices. Whether you're looking to build a professional wardrobe, discover the latest celebrity style inspirations, or learn about color psychology in fashion, we've got you covered.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our expert team curates content on vintage fashion revival, minimalist wardrobe essentials, denim styling, and much more. Stay updated with weekly trend reports, style guides, and practical fashion tips that help you express your unique style while staying current with 2025 fashion movements.
+                Our expert team curates content on vintage fashion revival, minimalist wardrobe essentials, denim styling, and much more. Stay updated with weekly trend reports, style guides, and practical fashion tips that help you express your unique style while staying current with 2026 fashion movements.
               </p>
             </div>
           </div>

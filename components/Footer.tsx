@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Your premier destination for the latest fashion trends, expert style tips, and wardrobe essentials for 2025.
+              Your premier destination for the latest fashion trends, expert style tips, and wardrobe essentials for 2026.
             </p>
           </div>
           <div className="animate-slide-in-left stagger-1">

@@ -4,12 +4,12 @@ import { getPostsByCategory } from '@/lib/posts'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Fashion Trends 2025 - Latest Style Trends | StyleVogue',
-  description: 'Explore the latest fashion trends for 2025. Discover seasonal trends, celebrity-inspired styles, sustainable fashion movements, and must-have wardrobe pieces trending this year.',
-  keywords: 'fashion trends 2025, latest trends, seasonal fashion, trending styles, fashion movements, style trends',
+  title: 'Fashion Trends 2026 - Latest Style Trends | StyleVogue',
+  description: 'Explore the latest fashion trends for 2026. Discover seasonal trends, celebrity-inspired styles, sustainable fashion movements, and must-have wardrobe pieces trending this year.',
+  keywords: 'fashion trends 2026, latest trends, seasonal fashion, trending styles, fashion movements, style trends',
   openGraph: {
-    title: 'Fashion Trends 2025 - Latest Style Trends',
-    description: 'Explore the latest fashion trends for 2025',
+    title: 'Fashion Trends 2026 - Latest Style Trends',
+    description: 'Explore the latest fashion trends for 2026',
   },
 }
 
@@ -19,8 +19,8 @@ export default function TrendsPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Fashion Trends 2025',
-    description: 'Latest fashion trends and style movements for 2025',
+    name: 'Fashion Trends 2026',
+    description: 'Latest fashion trends and style movements for 2026',
     url: 'https://stylevogue.com/fashion/trends',
   }
 
@@ -33,10 +33,10 @@ export default function TrendsPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-            Fashion <span className="gradient-text">Trends 2025</span>
+            Fashion <span className="gradient-text">Trends 2026</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead of the curve with the latest fashion trends shaping 2025. From seasonal must-haves to celebrity-inspired styles, discover what's trending now.
+            Stay ahead of the curve with the latest fashion trends shaping 2026. From seasonal must-haves to celebrity-inspired styles, discover what's trending now.
           </p>
         </div>
 
@@ -92,11 +92,11 @@ export default function TrendsPage() {
         <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Understanding Fashion Trends in 2025
+              Understanding Fashion Trends in 2026
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-4">
-                Fashion trends in 2025 reflect a dynamic blend of sustainability, comfort, and self-expression. This year, we're seeing a significant shift toward eco-conscious choices, with sustainable fashion becoming mainstream rather than niche.
+                Fashion trends in 2026 reflect a dynamic blend of sustainability, comfort, and self-expression. This year, we're seeing a significant shift toward eco-conscious choices, with sustainable fashion becoming mainstream rather than niche.
               </p>
               <p className="mb-4">
                 Key trend movements include the revival of vintage styles from the 70s, 80s, and 90s, the dominance of oversized silhouettes that prioritize comfort, and bold color choices that allow for personal expression. Denim continues to evolve with wide-leg and straight-leg cuts taking center stage.
@@ -105,7 +105,7 @@ export default function TrendsPage() {
                 Seasonal trends play a crucial role, with spring bringing pastels and florals, while winter emphasizes cozy textures and rich, warm colors. Accessories have become statement-makers, with bold jewelry, designer handbags, and unique footwear complementing minimalist base outfits.
               </p>
               <p>
-                To stay on trend in 2025, focus on investing in quality pieces that can be styled multiple ways, embrace sustainable fashion choices, and don't be afraid to mix vintage finds with modern pieces for a unique look that's both current and personal.
+                To stay on trend in 2026, focus on investing in quality pieces that can be styled multiple ways, embrace sustainable fashion choices, and don't be afraid to mix vintage finds with modern pieces for a unique look that's both current and personal.
               </p>
             </div>
           </div>
