@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getFeaturedPosts, getAllPosts } from '@/lib/posts'
 import { Metadata } from 'next'
+import LatestTrendNews from '@/components/LatestTrendNews'
 
 export const metadata: Metadata = {
   title: 'StyleVogue - Premier Fashion Trends & Style Guide 2025',
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
     type: 'website',
   },
 }
+
+// Revalidate every 24 hours (86400 seconds) for daily news updates
+export const revalidate = 86400
 
 export default async function Home() {
   const featuredPosts = getFeaturedPosts()
@@ -216,6 +220,9 @@ export default async function Home() {
             ))}
           </div>
         </section>
+
+        {/* Latest Trend News Section */}
+        <LatestTrendNews />
 
         {/* Latest Posts Section */}
         <section className="mb-20">
