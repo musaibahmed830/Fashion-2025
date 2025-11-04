@@ -147,8 +147,8 @@ export default function TermsPage() {
             <div className="bg-white rounded-lg p-6 mt-4">
               <p className="text-lg text-gray-700 mb-2">
                 <strong>Email:</strong>{' '}
-                <a href="mailto:support@stylevoguefashion.com" className="text-pink-600 hover:underline font-semibold">
-                  support@stylevoguefashion.com
+                <a href="mailto:musaibahmed830@gmail.com" className="text-pink-600 hover:underline font-semibold">
+                  musaibahmed830@gmail.com
                 </a>
               </p>
               <p className="text-lg text-gray-700">

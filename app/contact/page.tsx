@@ -39,8 +39,8 @@ export default function ContactPage() {
                 <span className="text-2xl mr-3">📩</span>
                 <div>
                   <strong className="text-gray-900">Email:</strong>{' '}
-                  <a href="mailto:support@stylevoguefashion.com" className="text-pink-600 hover:underline font-semibold">
-                    support@stylevoguefashion.com
+                  <a href="mailto:musaibahmed830@gmail.com" className="text-pink-600 hover:underline font-semibold">
+                    musaibahmed830@gmail.com
                   </a>
                 </div>
               </p>
