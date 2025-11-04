@@ -43,6 +43,12 @@ export default function Footer() {
               <li>
                 <Link href="/privacy" className="hover:text-pink-400 transition-colors">Privacy Policy</Link>
               </li>
+              <li>
+                <Link href="/terms" className="hover:text-pink-400 transition-colors">Terms & Conditions</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-pink-400 transition-colors">Contact</Link>
+              </li>
             </ul>
           </div>
           <div className="animate-slide-in-left stagger-2">
@@ -87,6 +93,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 animate-fade-in">
+          <div className="flex flex-wrap justify-center gap-4 mb-4 text-sm">
+            <Link href="/privacy" className="hover:text-pink-400 transition-colors">Privacy Policy</Link>
+            <span className="text-gray-600">|</span>
+            <Link href="/terms" className="hover:text-pink-400 transition-colors">Terms & Conditions</Link>
+            <span className="text-gray-600">|</span>
+            <Link href="/contact" className="hover:text-pink-400 transition-colors">Contact</Link>
+          </div>
           <p>&copy; 2025 StyleVogue. All rights reserved.</p>
           <p className="mt-2 text-sm">Your premier source for fashion trends, style tips, and wardrobe inspiration.</p>
         </div>
