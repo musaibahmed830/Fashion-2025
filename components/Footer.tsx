@@ -40,6 +40,9 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="hover:text-pink-400 transition-colors">About</Link>
               </li>
+              <li>
+                <Link href="/privacy" className="hover:text-pink-400 transition-colors">Privacy Policy</Link>
+              </li>
             </ul>
           </div>
           <div className="animate-slide-in-left stagger-2">
