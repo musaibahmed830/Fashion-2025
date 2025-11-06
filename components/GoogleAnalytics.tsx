@@ -3,11 +3,7 @@
 import Script from 'next/script'
 
 export default function GoogleAnalytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
-
-  if (!gaId) {
-    return null
-  }
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-BPZH7KPZHH'
 
   return (
     <>
@@ -23,9 +19,7 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${gaId}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${gaId}');
           `,
         }}
       />

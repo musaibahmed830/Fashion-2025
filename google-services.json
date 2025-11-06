@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "152862622262",
+    "project_id": "fill-the-fridge-69c4d",
+    "storage_bucket": "fill-the-fridge-69c4d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152862622262:android:eaca2b1fa9f342beb04e97",
+        "android_client_info": {
+          "package_name": "com.iplay.fill.the.fridge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyWusiHdGfKR5BWlqXvpT-mwy2eNxeLFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
