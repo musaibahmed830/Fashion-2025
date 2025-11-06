@@ -1,0 +1,16 @@
+# robots.txt for Style Vogue Fashion
+# Block old WordPress feed URLs and plugin directories
+
+User-agent: *
+Allow: /
+Disallow: /color/*/feed/
+Disallow: /manufacturer/*/feed/
+Disallow: /size/*/feed/
+Disallow: /wp-content/
+Disallow: /wp-admin/
+Disallow: /feed/
+Disallow: /*/feed/
+
+# Sitemap
+Sitemap: https://stylevoguefashion.com/sitemap.xml
+

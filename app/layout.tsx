@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://stylevogue.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://stylevoguefashion.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://stylevogue.com',
+    url: 'https://stylevoguefashion.com',
     siteName: 'StyleVogue',
     title: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
     description: 'Discover the latest fashion trends, style tips, and wardrobe essentials for 2026',

@@ -9,6 +9,15 @@ module.exports = {
       {
         userAgent: '*',
         allow: '/',
+        disallow: [
+          '/color/*/feed/',
+          '/manufacturer/*/feed/',
+          '/size/*/feed/',
+          '/wp-content/',
+          '/wp-admin/',
+          '/feed/',
+          '/*/feed/',
+        ],
       },
     ],
     additionalSitemaps: [
