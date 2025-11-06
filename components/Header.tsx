@@ -18,7 +18,7 @@ export default function Header() {
             <div className="relative w-12 h-12 md:w-16 md:h-16">
               <Image
                 src="/logo.png"
-                alt="StyleVogue Logo"
+                alt="Style Vogue Fashion Logo - Latest Trends & Beauty Tips"
                 fill
                 className="object-contain"
                 priority

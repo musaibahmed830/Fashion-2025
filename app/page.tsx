@@ -5,12 +5,12 @@ import { Metadata } from 'next'
 import LatestTrendNews from '@/components/LatestTrendNews'
 
 export const metadata: Metadata = {
-  title: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
-  description: 'StyleVogue: Discover the hottest fashion trends, expert style tips, and wardrobe essentials for 2026. Your premier guide to staying stylish with sustainable fashion, celebrity inspiration, and seasonal trends.',
-  keywords: 'StyleVogue, fashion trends 2026, style guide, fashion blog, wardrobe essentials, sustainable fashion, celebrity style, fashion tips, style inspiration',
+  title: 'Style Vogue Fashion – Latest Trends & Beauty Tips | Fashion Blog 2026',
+  description: 'Discover the latest fashion trends, beauty tips, and style guides at Style Vogue Fashion. Expert advice on wardrobe essentials, sustainable fashion, and celebrity style inspiration.',
+  keywords: 'Style Vogue Fashion, fashion trends, beauty tips, style guides, fashion blog, wardrobe essentials, sustainable fashion, celebrity style, fashion tips',
   openGraph: {
-    title: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
-    description: 'Discover the hottest fashion trends, style tips, and wardrobe essentials for 2026',
+    title: 'Style Vogue Fashion – Latest Trends & Beauty Tips',
+    description: 'Discover the latest fashion trends, beauty tips, and style guides at Style Vogue Fashion',
     type: 'website',
   },
 }
@@ -53,7 +53,7 @@ export default async function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-slide-in-left">
-              Discover Your Style in <span className="text-yellow-300">2026</span>
+              Style Vogue Fashion – Latest Trends & Beauty Tips for <span className="text-yellow-300">2026</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed animate-slide-in-right">
               Your ultimate fashion destination for the latest trends, expert style tips, and wardrobe essentials. Transform your look with confidence.
@@ -129,7 +129,7 @@ export default async function Home() {
                     </div>
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={`${post.title} - ${post.category} fashion trend image`}
                     fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -247,7 +247,7 @@ export default async function Home() {
                   <div className="relative h-48 w-full image-zoom">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={`${post.title} - Latest fashion post image`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />

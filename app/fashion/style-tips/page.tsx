@@ -4,11 +4,11 @@ import { getPostsByCategory } from '@/lib/posts'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Style Tips & Fashion Advice - Expert Style Guides | StyleVogue',
+  title: 'Style Tips & Fashion Advice – Expert Beauty Tips | Style Vogue Fashion',
   description: 'Expert style tips and fashion advice for building the perfect wardrobe. Learn professional styling techniques, color coordination, body type dressing, and timeless fashion principles.',
-  keywords: 'style tips, fashion advice, styling tips, wardrobe advice, fashion guides, professional styling, fashion tips',
+  keywords: 'style tips, fashion advice, styling tips, wardrobe advice, fashion guides, professional styling, beauty tips, style vogue fashion',
   openGraph: {
-    title: 'Style Tips & Fashion Advice - Expert Style Guides',
+    title: 'Style Tips & Fashion Advice – Expert Beauty Tips',
     description: 'Expert style tips and fashion advice for building the perfect wardrobe',
   },
 }
@@ -33,7 +33,7 @@ export default function StyleTipsPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-            Style <span className="gradient-text">Tips & Advice</span>
+            Style Tips & Fashion Advice – Expert Beauty Tips
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Master the art of styling with our expert fashion advice. From building a professional wardrobe to understanding color psychology, learn the principles that make great style.
@@ -53,7 +53,7 @@ export default function StyleTipsPage() {
                   <div className="relative h-64 w-full image-zoom">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={`${post.title} - Style tips and fashion advice image`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -91,7 +91,7 @@ export default function StyleTipsPage() {
         {/* Quick Style Tips Section */}
         <section className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
           <div className="bg-white rounded-lg shadow-lg p-8 hover-lift">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Essential Style Principles</h3>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Essential Style Principles</h2>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="text-pink-600 mr-2">•</span>
@@ -117,7 +117,7 @@ export default function StyleTipsPage() {
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 hover-lift">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Wardrobe Building Tips</h3>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Wardrobe Building Tips</h2>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="text-pink-600 mr-2">•</span>
@@ -147,7 +147,7 @@ export default function StyleTipsPage() {
         <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Mastering Personal Style: A Comprehensive Guide
+              Best Style Tips for Women
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-4">

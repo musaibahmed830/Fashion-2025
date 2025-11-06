@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - StyleVogue | Your Data Protection & Privacy Rights',
-  description: 'Learn how StyleVogueFashion.com collects, uses, and protects your personal information. Our comprehensive privacy policy explains cookies, analytics, advertising, and your rights under GDPR and CCPA.',
-  keywords: 'privacy policy, data protection, GDPR, CCPA, cookies policy, StyleVogue privacy, user rights',
+  title: 'Privacy Policy – Style Vogue Fashion | Data Protection & Privacy Rights',
+  description: 'Learn how Style Vogue Fashion collects, uses, and protects your personal information. Our comprehensive privacy policy explains cookies, analytics, advertising, and your rights.',
+  keywords: 'privacy policy, data protection, GDPR, CCPA, cookies policy, Style Vogue Fashion privacy, user rights',
 }
 
 export default function PrivacyPolicyPage() {
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            Privacy <span className="gradient-text">Policy</span>
+            Privacy Policy – Style Vogue Fashion
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}

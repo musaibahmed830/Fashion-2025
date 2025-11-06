@@ -34,7 +34,7 @@ export default async function LatestTrendNews() {
               <div className="relative h-48 w-full image-zoom">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} - ${item.category} trending fashion news image`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />

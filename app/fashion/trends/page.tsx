@@ -4,11 +4,11 @@ import { getPostsByCategory } from '@/lib/posts'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Fashion Trends 2026 - Latest Style Trends | StyleVogue',
-  description: 'Explore the latest fashion trends for 2026. Discover seasonal trends, celebrity-inspired styles, sustainable fashion movements, and must-have wardrobe pieces trending this year.',
-  keywords: 'fashion trends 2026, latest trends, seasonal fashion, trending styles, fashion movements, style trends',
+  title: 'Fashion Trends 2026 – Latest Style Trends & Beauty Tips | Style Vogue Fashion',
+  description: 'Explore the latest fashion trends for 2026. Discover seasonal trends, celebrity-inspired styles, sustainable fashion movements, and must-have wardrobe pieces.',
+  keywords: 'fashion trends 2026, latest trends, seasonal fashion, trending styles, fashion movements, style trends, style vogue fashion',
   openGraph: {
-    title: 'Fashion Trends 2026 - Latest Style Trends',
+    title: 'Fashion Trends 2026 – Latest Style Trends & Beauty Tips',
     description: 'Explore the latest fashion trends for 2026',
   },
 }
@@ -33,7 +33,7 @@ export default function TrendsPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-            Fashion <span className="gradient-text">Trends 2026</span>
+            Fashion Trends 2026 – Latest Style Trends
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay ahead of the curve with the latest fashion trends shaping 2026. From seasonal must-haves to celebrity-inspired styles, discover what's trending now.
@@ -53,7 +53,7 @@ export default function TrendsPage() {
                   <div className="relative h-64 w-full image-zoom">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={`${post.title} - Fashion trend 2026 image`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -92,7 +92,7 @@ export default function TrendsPage() {
         <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Understanding Fashion Trends in 2026
+              Best Fashion Trends for 2026
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-4">

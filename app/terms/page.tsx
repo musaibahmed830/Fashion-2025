@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions - StyleVogue | Website Terms of Use',
-  description: 'Read the Terms & Conditions for StyleVogueFashion.com. Learn about content usage, affiliate disclosure, external links, and our website policies.',
-  keywords: 'terms and conditions, StyleVogue terms, website terms of use, user agreement, affiliate disclosure',
+  title: 'Terms & Conditions – Style Vogue Fashion | Website Terms of Use',
+  description: 'Read the Terms & Conditions for Style Vogue Fashion. Learn about content usage, affiliate disclosure, external links, and our website policies.',
+  keywords: 'terms and conditions, Style Vogue Fashion terms, website terms of use, user agreement, affiliate disclosure',
 }
 
 export default function TermsPage() {
@@ -24,7 +24,7 @@ export default function TermsPage() {
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            Terms & <span className="gradient-text">Conditions</span>
+            Terms & Conditions – Style Vogue Fashion
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })} 2025

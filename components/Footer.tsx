@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="relative w-10 h-10">
                 <Image
                   src="/logo.png"
-                  alt="StyleVogue Logo"
+                  alt="Style Vogue Fashion Logo - Latest Trends & Beauty Tips"
                   fill
                   className="object-contain"
                 />

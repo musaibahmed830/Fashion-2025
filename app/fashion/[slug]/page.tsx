@@ -112,7 +112,7 @@ export default function FashionPost({ params }: Props) {
             {post.category}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-gray-900">
-            {post.title}
+            {post.title} – Style Vogue Fashion
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-8">
             <span className="flex items-center">
@@ -135,7 +135,7 @@ export default function FashionPost({ params }: Props) {
         <div className="relative h-96 w-full mb-12 rounded-lg overflow-hidden shadow-xl animate-scale-in image-zoom">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={`${post.title} - ${post.category} fashion article featured image`}
             fill
             className="object-cover"
             priority
