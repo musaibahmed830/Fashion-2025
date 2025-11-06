@@ -1,6 +1,7 @@
 'use client'
 
 import Script from 'next/script'
+import PageViewTracker from './PageViewTracker'
 
 export default function GoogleAnalytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-BPZH7KPZHH'
@@ -19,10 +20,13 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${gaId}');
+            gtag('config', '${gaId}', {
+              page_path: window.location.pathname,
+            });
           `,
         }}
       />
+      <PageViewTracker />
     </>
   )
 }

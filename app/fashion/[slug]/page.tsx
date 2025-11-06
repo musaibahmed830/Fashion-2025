@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import ArticleViewTracker from '@/components/ArticleViewTracker'
 
 type Props = {
   params: { slug: string }
@@ -97,6 +98,7 @@ export default function FashionPost({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <ArticleViewTracker title={post.title} slug={post.slug} />
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <Link 
           href="/fashion" 
