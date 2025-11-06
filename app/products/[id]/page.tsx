@@ -1,8 +1,7 @@
-'use client'
-
-import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { useState } from 'react'
+import Link from 'next/link'
+import { Metadata } from 'next'
 
 interface Product {
   id: string
@@ -16,7 +15,7 @@ interface Product {
   price?: string
 }
 
-const bestSellingProducts: Product[] = [
+const products: Product[] = [
   {
     id: '1',
     name: 'Classic White Button-Down Shirt',
@@ -151,150 +150,121 @@ const bestSellingProducts: Product[] = [
   },
 ]
 
-export default function ProductsPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All Products')
-  const categories = ['All Products', ...Array.from(new Set(bestSellingProducts.map(p => p.category)))]
+function getProductById(id: string): Product | undefined {
+  return products.find(p => p.id === id)
+}
+
+type Props = {
+  params: { id: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const product = getProductById(params.id)
   
-  const filteredProducts = selectedCategory === 'All Products' 
-    ? bestSellingProducts 
-    : bestSellingProducts.filter(p => p.category === selectedCategory)
+  if (!product) {
+    return {
+      title: 'Product Not Found'
+    }
+  }
+
+  return {
+    title: `${product.name} – Best Selling Product | Style Vogue Fashion`,
+    description: `${product.description} ${product.use}`,
+    keywords: `${product.name}, ${product.category}, best selling product, fashion product, style vogue fashion`,
+  }
+}
+
+export default function ProductDetailPage({ params }: Props) {
+  const product = getProductById(params.id)
+
+  if (!product) {
+    notFound()
+  }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12 animate-fade-in">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-          Best Selling Products – Top Fashion Items
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover the most popular fashion products, accessories, and beauty items. Each product includes detailed descriptions and practical uses to help you build the perfect wardrobe.
-        </p>
-      </div>
+    <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <Link 
+        href="/products" 
+        className="text-pink-600 hover:text-pink-700 hover:underline mb-6 inline-block transition-colors animate-fade-in"
+      >
+        ← Back to Products
+      </Link>
 
-      {/* Category Filter */}
-      <div className="mb-8 flex flex-wrap gap-3 justify-center animate-fade-in">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-6 py-2 rounded-full font-semibold transition-colors ${
-              selectedCategory === category
-                ? 'bg-pink-600 text-white hover:bg-pink-700'
-                : 'bg-gray-100 text-gray-700 hover:bg-pink-100 hover:text-pink-600'
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      {/* Products Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        {filteredProducts.map((product, index) => (
-          <article
-            key={product.id}
-            className="bg-white rounded-xl shadow-lg overflow-hidden hover-lift border border-gray-100 group animate-fade-in"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            <div className="relative h-64 w-full image-zoom">
-              <Image
-                src={product.image}
-                alt={`${product.name} - ${product.category} best selling product image`}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute top-3 left-3 z-10">
-                <span className="bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-bold">
-                  Best Seller
-                </span>
-              </div>
-              <div className="absolute top-3 right-3 z-10">
-                <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1">
-                  <svg className="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                  </svg>
-                  <span className="text-xs font-bold text-gray-900">{product.rating}</span>
-                </div>
-              </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 animate-fade-in">
+        {/* Product Image */}
+        <div className="relative h-96 lg:h-[600px] w-full rounded-lg overflow-hidden shadow-xl">
+          <Image
+            src={product.image}
+            alt={`${product.name} - ${product.category} product image`}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute top-4 left-4 z-10">
+            <span className="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+              Best Seller
+            </span>
+          </div>
+          <div className="absolute top-4 right-4 z-10">
+            <div className="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full flex items-center gap-2">
+              <svg className="w-5 h-5 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+              </svg>
+              <span className="text-sm font-bold text-gray-900">{product.rating}</span>
             </div>
-            
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-pink-600 font-semibold uppercase tracking-wide">
-                  {product.category}
-                </span>
-                {product.price && (
-                  <span className="text-lg font-bold text-gray-900">{product.price}</span>
-                )}
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-pink-600 transition-colors">
-                {product.name}
-              </h2>
-              
-              <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
-                {product.description}
-              </p>
-
-              <div className="mb-4">
-                <h3 className="text-sm font-bold text-gray-900 mb-2">Best Use:</h3>
-                <p className="text-sm text-gray-700 leading-relaxed line-clamp-3">
-                  {product.use}
-                </p>
-              </div>
-
-              <div className="mb-4">
-                <h3 className="text-sm font-bold text-gray-900 mb-2">Key Features:</h3>
-                <ul className="space-y-1">
-                  {product.features.slice(0, 3).map((feature, idx) => (
-                    <li key={idx} className="text-xs text-gray-600 flex items-start">
-                      <span className="text-pink-600 mr-2">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100">
-                <Link
-                  href={`/products/${product.id}`}
-                  className="block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
-                >
-                  View Product Details
-                </Link>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      {filteredProducts.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-gray-600 text-lg">No products found in this category.</p>
-        </div>
-      )}
-
-      {/* SEO Content Section */}
-      <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Best Selling Fashion Products for Your Wardrobe
-          </h2>
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="mb-4">
-              Our curated collection of best-selling products represents the most popular and highly-rated fashion items that have proven their value to thousands of customers. These products are selected based on quality, versatility, customer satisfaction, and timeless design.
-            </p>
-            <p className="mb-4">
-              Each product in our best-selling collection has been carefully chosen for its ability to enhance your wardrobe and provide multiple styling options. From wardrobe essentials like classic white shirts and trench coats to statement accessories like leather bags and gold jewelry, these items form the foundation of a well-rounded, stylish wardrobe.
-            </p>
-            <p className="mb-4">
-              When building your wardrobe, investing in best-selling products ensures you're choosing items that have stood the test of time and proven their worth. These products offer excellent value, versatility, and quality that will serve you well for years to come.
-            </p>
-            <p>
-              Whether you're looking for wardrobe basics, statement pieces, or versatile accessories, our best-selling products collection has something for every style preference and budget. Each product includes detailed descriptions and practical use cases to help you make informed decisions about your fashion investments.
-            </p>
           </div>
         </div>
-      </section>
+
+        {/* Product Details */}
+        <div className="space-y-6">
+          <div>
+            <span className="text-sm text-pink-600 font-semibold uppercase tracking-wide mb-2 inline-block">
+              {product.category}
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              {product.name}
+            </h1>
+            {product.price && (
+              <div className="text-3xl font-bold text-gray-900 mb-6">
+                {product.price}
+              </div>
+            )}
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">Description</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {product.description}
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">Best Use</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {product.use}
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3 text-gray-900">Key Features</h2>
+            <ul className="space-y-2">
+              {product.features.map((feature, idx) => (
+                <li key={idx} className="text-lg text-gray-700 flex items-start">
+                  <span className="text-pink-600 mr-3 mt-1">✓</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="pt-6 border-t border-gray-200">
+            <button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-4 px-8 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg">
+              Add to Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
+
