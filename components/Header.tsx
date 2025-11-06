@@ -59,6 +59,12 @@ export default function Header() {
               </Link>
             </li>
             <li className="animate-slide-in-right stagger-5">
+              <Link href="/products" className="hover:text-pink-600 font-semibold transition-colors relative group">
+                Products
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-600 transition-all group-hover:w-full"></span>
+              </Link>
+            </li>
+            <li className="animate-slide-in-right stagger-6">
               <Link href="/about" className="hover:text-pink-600 font-semibold transition-colors relative group">
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-600 transition-all group-hover:w-full"></span>
@@ -99,6 +105,11 @@ export default function Header() {
             <li>
               <Link href="/fashion/style-tips" className="block hover:text-pink-600 font-semibold py-2 transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Style Tips
+              </Link>
+            </li>
+            <li>
+              <Link href="/products" className="block hover:text-pink-600 font-semibold py-2 transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Products
               </Link>
             </li>
             <li>

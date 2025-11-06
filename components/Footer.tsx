@@ -38,6 +38,9 @@ export default function Footer() {
                 <Link href="/fashion/style-tips" className="hover:text-pink-400 transition-colors">Style Tips</Link>
               </li>
               <li>
+                <Link href="/products" className="hover:text-pink-400 transition-colors">Best Selling Products</Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>
