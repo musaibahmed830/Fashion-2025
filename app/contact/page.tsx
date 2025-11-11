@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Style Vogue Fashion – Get in Touch | Fashion Blog',
-  description: 'Contact Style Vogue Fashion for fashion inquiries, partnership opportunities, or general questions. We respond within 24-48 hours.',
-  keywords: 'contact Style Vogue Fashion, fashion blog contact, partnership inquiries, fashion support',
+  title: 'Contact StyleVogue - Get in Touch | Fashion Blog',
+  description: 'Contact StyleVogue for fashion inquiries, partnership opportunities, or general questions. We respond within 24-48 hours.',
+  keywords: 'contact stylevogue, fashion blog contact, partnership inquiries, fashion support',
 }
 
 export default function ContactPage() {
@@ -24,8 +24,8 @@ export default function ContactPage() {
       />
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            Contact Style Vogue Fashion – Get in Touch
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+            Contact StyleVogue
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We'd love to hear from you! Whether you have a question about our fashion articles, partnership opportunities, or general inquiries — feel free to reach out.

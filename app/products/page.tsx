@@ -162,7 +162,7 @@ export default function ProductsPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12 animate-fade-in">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
           Best Selling Products – Top Fashion Items
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -274,11 +274,11 @@ export default function ProductsPage() {
       )}
 
       {/* SEO Content Section */}
-      <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
+      <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 sm:p-8 md:p-12 animate-fade-in">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Best Selling Fashion Products for Your Wardrobe
-          </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Best Selling Fashion Products for Your Wardrobe
+            </h2>
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="mb-4">
               Our curated collection of best-selling products represents the most popular and highly-rated fashion items that have proven their value to thousands of customers. These products are selected based on quality, versatility, customer satisfaction, and timeless design.

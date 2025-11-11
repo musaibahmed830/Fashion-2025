@@ -4,9 +4,9 @@ import { getAllPosts } from '@/lib/posts'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Fashion Posts – Style Guides & Latest Trends | Style Vogue Fashion',
+  title: 'Fashion Posts - Style Guides & Trends | StyleVogue',
   description: 'Browse all fashion posts covering the latest trends, style tips, wardrobe essentials, sustainable fashion, and celebrity style inspiration for 2026.',
-  keywords: 'fashion posts, style guides, fashion articles, wardrobe tips, fashion trends, style vogue fashion',
+  keywords: 'fashion posts, style guides, fashion articles, wardrobe tips, fashion trends, stylevogue',
 }
 
 export default function FashionPage() {
@@ -28,8 +28,8 @@ export default function FashionPage() {
       />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-            Fashion Posts – Style Guides & Latest Trends
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
+            Fashion Posts – Style Guides & Trends
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore our complete collection of fashion articles, style guides, and trend reports covering everything you need to stay stylish in 2026.

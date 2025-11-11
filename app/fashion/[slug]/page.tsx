@@ -111,8 +111,8 @@ export default function FashionPost({ params }: Props) {
           <span className="text-pink-600 font-semibold text-sm uppercase tracking-wide">
             {post.category}
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-gray-900">
-            {post.title} – Style Vogue Fashion
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6 text-gray-900">
+            {post.title}
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-8">
             <span className="flex items-center">

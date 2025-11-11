@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Style Vogue Fashion – Fashion Blog & Beauty Tips',
-  description: 'Learn about Style Vogue Fashion, your premier source for the latest fashion trends, expert style tips, and wardrobe inspiration. Discover our mission to inspire personal style.',
-  keywords: 'about Style Vogue Fashion, fashion blog, style inspiration, fashion content creators, beauty tips',
+  title: 'About StyleVogue - Fashion Blog & Style Tips',
+  description: 'Learn about StyleVogue, your premier source for the latest fashion trends, expert style tips, and wardrobe inspiration. Discover our mission to inspire personal style.',
+  keywords: 'about stylevogue, fashion blog, style inspiration, fashion content creators, beauty tips',
 }
 
 export default function AboutPage() {
@@ -23,8 +23,8 @@ export default function AboutPage() {
       />
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            About Style Vogue Fashion – Fashion Blog & Beauty Tips
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+            About StyleVogue
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Your trusted destination for the latest fashion trends, style tips, and wardrobe inspiration

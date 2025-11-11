@@ -4,11 +4,11 @@ import { getPostsByCategory } from '@/lib/posts'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Style Tips & Fashion Advice – Expert Beauty Tips | Style Vogue Fashion',
+  title: 'Style Tips & Fashion Advice - Expert Guide | StyleVogue',
   description: 'Expert style tips and fashion advice for building the perfect wardrobe. Learn professional styling techniques, color coordination, body type dressing, and timeless fashion principles.',
-  keywords: 'style tips, fashion advice, styling tips, wardrobe advice, fashion guides, professional styling, beauty tips, style vogue fashion',
+  keywords: 'style tips, fashion advice, styling tips, wardrobe advice, fashion guides, professional styling, beauty tips, stylevogue',
   openGraph: {
-    title: 'Style Tips & Fashion Advice – Expert Beauty Tips',
+    title: 'Style Tips & Fashion Advice - Expert Guide',
     description: 'Expert style tips and fashion advice for building the perfect wardrobe',
   },
 }
@@ -32,8 +32,8 @@ export default function StyleTipsPage() {
       />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-            Style Tips & Fashion Advice – Expert Beauty Tips
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
+            Style Tips & Fashion Advice
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Master the art of styling with our expert fashion advice. From building a professional wardrobe to understanding color psychology, learn the principles that make great style.
@@ -144,9 +144,9 @@ export default function StyleTipsPage() {
         </section>
 
         {/* SEO Content Section */}
-        <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
+        <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 sm:p-8 md:p-12 animate-fade-in">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               Best Style Tips for Women
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">

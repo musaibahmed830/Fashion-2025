@@ -168,7 +168,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${product.name} – Best Selling Product | Style Vogue Fashion`,
+    title: `${product.name} – Best Seller | StyleVogue`,
     description: `${product.description} ${product.use}`,
     keywords: `${product.name}, ${product.category}, best selling product, fashion product, style vogue fashion`,
   }
@@ -221,7 +221,7 @@ export default function ProductDetailPage({ params }: Props) {
             <span className="text-sm text-pink-600 font-semibold uppercase tracking-wide mb-2 inline-block">
               {product.category}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">
               {product.name}
             </h1>
             {product.price && (

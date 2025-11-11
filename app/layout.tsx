@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
+    default: 'StyleVogue - Fashion Trends & Style Guide 2026',
     template: '%s | StyleVogue'
   },
   description: 'StyleVogue: Your premier destination for the latest fashion trends, expert style tips, and wardrobe essentials in 2026. Discover top fashion trends, sustainable style, celebrity fashion inspiration, and professional styling advice.',
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://stylevoguefashion.com',
     siteName: 'StyleVogue',
-    title: 'StyleVogue - Premier Fashion Trends & Style Guide 2026',
+    title: 'StyleVogue - Fashion Trends & Style Guide 2026',
     description: 'Discover the latest fashion trends, style tips, and wardrobe essentials for 2026',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'StyleVogue - Premier Fashion Trends & Style Tips',
+    title: 'StyleVogue - Fashion Trends & Style Tips',
     description: 'Your ultimate guide to staying stylish in 2026',
   },
   robots: {

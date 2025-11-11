@@ -4,11 +4,11 @@ import { getPostsByCategory } from '@/lib/posts'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Fashion Trends 2026 – Latest Style Trends & Beauty Tips | Style Vogue Fashion',
+  title: 'Fashion Trends 2026 - Latest Style Trends | StyleVogue',
   description: 'Explore the latest fashion trends for 2026. Discover seasonal trends, celebrity-inspired styles, sustainable fashion movements, and must-have wardrobe pieces.',
-  keywords: 'fashion trends 2026, latest trends, seasonal fashion, trending styles, fashion movements, style trends, style vogue fashion',
+  keywords: 'fashion trends 2026, latest trends, seasonal fashion, trending styles, fashion movements, style trends, stylevogue',
   openGraph: {
-    title: 'Fashion Trends 2026 – Latest Style Trends & Beauty Tips',
+    title: 'Fashion Trends 2026 - Latest Style Trends',
     description: 'Explore the latest fashion trends for 2026',
   },
 }
@@ -32,7 +32,7 @@ export default function TrendsPage() {
       />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
             Fashion Trends 2026 – Latest Style Trends
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -89,9 +89,9 @@ export default function TrendsPage() {
         )}
 
         {/* SEO Content Section */}
-        <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-fade-in">
+        <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 sm:p-8 md:p-12 animate-fade-in">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               Best Fashion Trends for 2026
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
