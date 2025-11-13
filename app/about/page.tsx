@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   title: 'About StyleVogue - Fashion Blog & Style Tips',
   description: 'Learn about StyleVogue, your premier source for the latest fashion trends, expert style tips, and wardrobe inspiration. Discover our mission to inspire personal style.',
   keywords: 'about stylevogue, fashion blog, style inspiration, fashion content creators, beauty tips',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/about',
+  },
+  openGraph: {
+    title: 'About StyleVogue - Fashion Blog & Style Tips',
+    description: 'Learn about StyleVogue, your premier source for the latest fashion trends and expert style tips',
+    url: 'https://stylevoguefashion.com/about',
+  },
 }
 
 export default function AboutPage() {

@@ -167,10 +167,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
+  const canonicalUrl = `https://stylevoguefashion.com/products/${params.id}`
+
   return {
     title: `${product.name} – Best Seller | StyleVogue`,
     description: `${product.description} ${product.use}`,
     keywords: `${product.name}, ${product.category}, best selling product, fashion product, style vogue fashion`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${product.name} – Best Seller | StyleVogue`,
+      description: `${product.description} ${product.use}`,
+      url: canonicalUrl,
+      images: [product.image],
+    },
   }
 }
 

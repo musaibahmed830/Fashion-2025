@@ -7,9 +7,13 @@ export const metadata: Metadata = {
   title: 'Fashion Trends 2026 - Latest Style Trends | StyleVogue',
   description: 'Explore the latest fashion trends for 2026. Discover seasonal trends, celebrity-inspired styles, sustainable fashion movements, and must-have wardrobe pieces.',
   keywords: 'fashion trends 2026, latest trends, seasonal fashion, trending styles, fashion movements, style trends, stylevogue',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/fashion/trends',
+  },
   openGraph: {
     title: 'Fashion Trends 2026 - Latest Style Trends',
     description: 'Explore the latest fashion trends for 2026',
+    url: 'https://stylevoguefashion.com/fashion/trends',
   },
 }
 
@@ -35,9 +39,22 @@ export default function TrendsPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
             Fashion Trends 2026 – Latest Style Trends
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Stay ahead of the curve with the latest fashion trends shaping 2026. From seasonal must-haves to celebrity-inspired styles, discover what's trending now.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link href="/fashion" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              All Fashion Posts →
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/fashion/style-tips" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Style Tips →
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/products" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Best Products →
+            </Link>
+          </div>
         </div>
 
         {trendingPosts.length > 0 ? (

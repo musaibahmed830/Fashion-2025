@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   title: 'Terms & Conditions - StyleVogue | Website Terms',
   description: 'Read the Terms & Conditions for StyleVogue. Learn about content usage, affiliate disclosure, external links, and our website policies.',
   keywords: 'terms and conditions, stylevogue terms, website terms of use, user agreement, affiliate disclosure',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/terms',
+  },
+  openGraph: {
+    title: 'Terms & Conditions - StyleVogue | Website Terms',
+    description: 'Read the Terms & Conditions for StyleVogue',
+    url: 'https://stylevoguefashion.com/terms',
+  },
 }
 
 export default function TermsPage() {

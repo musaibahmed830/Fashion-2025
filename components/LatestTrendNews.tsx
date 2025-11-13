@@ -9,17 +9,17 @@ export default async function LatestTrendNews() {
     <section className="mb-20 animate-fade-in">
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 mb-4">
-          <span className="text-pink-600 font-semibold uppercase tracking-wider text-sm">Yesterday's Trending</span>
+          <span className="text-pink-600 font-semibold uppercase tracking-wider text-sm">This Week's Fashion</span>
           <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
         </div>
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Yesterday's <span className="gradient-text">Trending News</span>
+          Latest Fashion <span className="gradient-text">News This Week</span>
         </h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Discover the hottest fashion news and trends that were trending yesterday from around the world
+          Stay updated with all the latest fashion news, trends, and industry updates from this week and yesterday
         </p>
         <p className="text-sm text-gray-500 mt-2">
-          Updated daily with yesterday's most popular fashion stories from global sources
+          Updated daily with the most popular fashion stories from global sources
         </p>
       </div>
 
@@ -91,7 +91,7 @@ export default async function LatestTrendNews() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
           <span className="text-sm text-gray-700 font-medium">
-            Yesterday's trending news updates automatically every 24 hours
+            Fashion news updates automatically with the latest stories from this week
           </span>
         </div>
       </div>

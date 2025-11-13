@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   title: 'Privacy Policy - StyleVogue | Data Protection',
   description: 'Learn how StyleVogue collects, uses, and protects your personal information. Our comprehensive privacy policy explains cookies, analytics, advertising, and your rights.',
   keywords: 'privacy policy, data protection, GDPR, CCPA, cookies policy, stylevogue privacy, user rights',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy - StyleVogue | Data Protection',
+    description: 'Learn how StyleVogue collects, uses, and protects your personal information',
+    url: 'https://stylevoguefashion.com/privacy',
+  },
 }
 
 export default function PrivacyPolicyPage() {

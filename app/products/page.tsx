@@ -165,9 +165,22 @@ export default function ProductsPage() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
           Best Selling Products – Top Fashion Items
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
           Discover the most popular fashion products, accessories, and beauty items. Each product includes detailed descriptions and practical uses to help you build the perfect wardrobe.
         </p>
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <Link href="/fashion" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+            Fashion Posts →
+          </Link>
+          <span className="text-gray-400">|</span>
+          <Link href="/fashion/trends" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+            Latest Trends →
+          </Link>
+          <span className="text-gray-400">|</span>
+          <Link href="/fashion/style-tips" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+            Style Tips →
+          </Link>
+        </div>
       </div>
 
       {/* Category Filter */}

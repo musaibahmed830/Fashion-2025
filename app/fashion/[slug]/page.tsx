@@ -25,14 +25,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
+  const canonicalUrl = `https://stylevoguefashion.com/fashion/${params.slug}`
+
   return {
     title: post.title,
     description: post.excerpt,
     keywords: post.keywords.join(', '),
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       images: [post.image],
+      url: canonicalUrl,
     },
   }
 }

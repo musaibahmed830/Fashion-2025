@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: 'Fashion Posts - Style Guides & Trends | StyleVogue',
   description: 'Browse all fashion posts covering the latest trends, style tips, wardrobe essentials, sustainable fashion, and celebrity style inspiration for 2026.',
   keywords: 'fashion posts, style guides, fashion articles, wardrobe tips, fashion trends, stylevogue',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/fashion',
+  },
+  openGraph: {
+    title: 'Fashion Posts - Style Guides & Trends',
+    description: 'Browse all fashion posts covering the latest trends, style tips, and wardrobe essentials',
+    url: 'https://stylevoguefashion.com/fashion',
+  },
 }
 
 export default function FashionPage() {
@@ -31,9 +39,22 @@ export default function FashionPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
             Fashion Posts – Style Guides & Trends
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Explore our complete collection of fashion articles, style guides, and trend reports covering everything you need to stay stylish in 2026.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link href="/fashion/trends" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Latest Trends →
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/fashion/style-tips" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Style Tips →
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/products" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Best Products →
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

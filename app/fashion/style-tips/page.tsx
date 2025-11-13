@@ -7,9 +7,13 @@ export const metadata: Metadata = {
   title: 'Style Tips & Fashion Advice - Expert Guide | StyleVogue',
   description: 'Expert style tips and fashion advice for building the perfect wardrobe. Learn professional styling techniques, color coordination, body type dressing, and timeless fashion principles.',
   keywords: 'style tips, fashion advice, styling tips, wardrobe advice, fashion guides, professional styling, beauty tips, stylevogue',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/fashion/style-tips',
+  },
   openGraph: {
     title: 'Style Tips & Fashion Advice - Expert Guide',
     description: 'Expert style tips and fashion advice for building the perfect wardrobe',
+    url: 'https://stylevoguefashion.com/fashion/style-tips',
   },
 }
 
@@ -35,9 +39,22 @@ export default function StyleTipsPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900">
             Style Tips & Fashion Advice
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Master the art of styling with our expert fashion advice. From building a professional wardrobe to understanding color psychology, learn the principles that make great style.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link href="/fashion" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              All Fashion Posts →
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/fashion/trends" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Latest Trends →
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/products" className="text-pink-600 hover:text-pink-700 hover:underline font-semibold">
+              Best Products →
+            </Link>
+          </div>
         </div>
 
         {styleTipsPosts.length > 0 ? (

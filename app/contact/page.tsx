@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: 'Contact StyleVogue - Get in Touch | Fashion Blog',
   description: 'Contact StyleVogue for fashion inquiries, partnership opportunities, or general questions. We respond within 24-48 hours.',
   keywords: 'contact stylevogue, fashion blog contact, partnership inquiries, fashion support',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/contact',
+  },
+  openGraph: {
+    title: 'Contact StyleVogue - Get in Touch',
+    description: 'Contact StyleVogue for fashion inquiries, partnership opportunities, or general questions',
+    url: 'https://stylevoguefashion.com/contact',
+  },
 }
 
 export default function ContactPage() {

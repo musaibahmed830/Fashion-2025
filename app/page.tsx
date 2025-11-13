@@ -8,10 +8,14 @@ export const metadata: Metadata = {
   title: 'StyleVogue - Latest Fashion Trends & Style Tips 2026',
   description: 'Discover the latest fashion trends, beauty tips, and style guides at StyleVogue. Expert advice on wardrobe essentials, sustainable fashion, and celebrity style inspiration.',
   keywords: 'StyleVogue, fashion trends, beauty tips, style guides, fashion blog, wardrobe essentials, sustainable fashion, celebrity style, fashion tips',
+  alternates: {
+    canonical: 'https://stylevoguefashion.com/',
+  },
   openGraph: {
     title: 'StyleVogue - Latest Fashion Trends & Style Tips',
     description: 'Discover the latest fashion trends, beauty tips, and style guides at StyleVogue',
     type: 'website',
+    url: 'https://stylevoguefashion.com/',
   },
 }
 
@@ -70,6 +74,12 @@ export default async function Home() {
                 className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-pink-600 transition-all hover:scale-105"
               >
                 Latest Trends
+              </Link>
+              <Link 
+                href="/products"
+                className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-pink-600 transition-all hover:scale-105"
+              >
+                Best Products
               </Link>
             </div>
           </div>
@@ -408,6 +418,12 @@ export default async function Home() {
                 className="bg-white text-pink-600 px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl inline-block"
               >
                 Browse Fashion Posts
+              </Link>
+              <Link 
+                href="/products"
+                className="bg-white text-pink-600 px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl inline-block"
+              >
+                View Products
               </Link>
               <Link 
                 href="/about"
