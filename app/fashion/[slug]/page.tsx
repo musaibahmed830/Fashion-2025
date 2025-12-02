@@ -4,6 +4,8 @@ import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import ArticleViewTracker from '@/components/ArticleViewTracker'
+import StructuredData from '@/components/StructuredData'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo'
 
 type Props = {
   params: { slug: string }
@@ -18,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug)
-  
+
   if (!post) {
     return {
       title: 'Post Not Found'
@@ -45,16 +47,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function formatContent(content: string): string {
   let html = content
-  
+
   // Convert headers
   html = html.replace(/^### (.*$)/gim, '<h3 class="text-2xl font-bold mt-6 mb-3 text-gray-900">$1</h3>')
   html = html.replace(/^## (.*$)/gim, '<h2 class="text-3xl font-bold mt-8 mb-4 text-gray-900">$1</h2>')
   html = html.replace(/^# (.*$)/gim, '<h1 class="text-4xl font-bold mt-10 mb-6 text-gray-900">$1</h1>')
-  
+
   // Convert lists
   html = html.replace(/^\- (.*$)/gim, '<li class="ml-6 mb-2">$1</li>')
   html = html.replace(/(<li.*<\/li>)/gim, '<ul class="list-disc mb-4">$1</ul>')
-  
+
   // Convert paragraphs
   html = html.split('\n\n').map((paragraph) => {
     if (!paragraph.match(/^<[hul]/) && paragraph.trim()) {
@@ -62,13 +64,13 @@ function formatContent(content: string): string {
     }
     return paragraph
   }).join('\n')
-  
+
   // Convert bold
   html = html.replace(/\*\*(.*?)\*\*/gim, '<strong class="font-semibold">$1</strong>')
-  
+
   // Convert line breaks
   html = html.replace(/\n/g, '<br />')
-  
+
   return html
 }
 
@@ -79,40 +81,31 @@ export default function FashionPost({ params }: Props) {
     notFound()
   }
 
-  const formattedContent = formatContent(post.content)
+  const canonicalUrl = `https://stylevoguefashion.com/fashion/${params.slug}`
 
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    image: post.image,
-    datePublished: post.date,
-    author: {
-      '@type': 'Organization',
-      name: 'StyleVogue',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'StyleVogue',
-    },
-  }
+  // Enhanced structured data
+  const articleSchema = generateArticleSchema(post, canonicalUrl)
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://stylevoguefashion.com' },
+    { name: 'Fashion', url: 'https://stylevoguefashion.com/fashion' },
+    { name: post.title, url: canonicalUrl }
+  ])
+
+  const formattedContent = formatContent(post.content)
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
+      {/* Enhanced SEO Structured Data */}
+      <StructuredData data={[articleSchema, breadcrumbSchema]} />
       <ArticleViewTracker title={post.title} slug={post.slug} />
       <article className="container mx-auto px-4 py-12 max-w-4xl">
-        <Link 
-          href="/fashion" 
+        <Link
+          href="/fashion"
           className="text-pink-600 hover:text-pink-700 hover:underline mb-6 inline-block transition-colors animate-fade-in"
         >
           ← Back to Fashion Posts
         </Link>
-        
+
         <div className="mb-8 animate-fade-in">
           <span className="text-pink-600 font-semibold text-sm uppercase tracking-wide">
             {post.category}
@@ -148,7 +141,7 @@ export default function FashionPost({ params }: Props) {
           />
         </div>
 
-        <div 
+        <div
           className="prose prose-lg max-w-none animate-fade-in"
           dangerouslySetInnerHTML={{ __html: formattedContent }}
         />

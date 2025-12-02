@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { getFeaturedPosts, getAllPosts } from '@/lib/posts'
 import { Metadata } from 'next'
 import LatestTrendNews from '@/components/LatestTrendNews'
+import StructuredData from '@/components/StructuredData'
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'StyleVogue - Latest Fashion Trends & Style Tips 2026',
@@ -27,26 +29,44 @@ export default async function Home() {
   const allPosts = getAllPosts()
   const latestPosts = allPosts.slice(0, 6)
 
-  const jsonLd = {
+  // Enhanced structured data for SEO
+  const organizationSchema = generateOrganizationSchema()
+  const websiteSchema = generateWebSiteSchema()
+
+  const blogSchema = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    name: 'StyleVogue',
+    name: 'StyleVogue Fashion Blog',
     description: 'Premier destination for latest fashion trends, expert style tips, and wardrobe essentials for 2026',
-    url: 'https://stylevogue.com',
+    url: 'https://stylevoguefashion.com',
+    inLanguage: 'en-US',
     publisher: {
       '@type': 'Organization',
       name: 'StyleVogue',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://stylevoguefashion.com/logo.png'
+      }
     },
+    blogPost: featuredPosts.slice(0, 3).map(post => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      image: post.image,
+      datePublished: new Date(post.date).toISOString(),
+      url: `https://stylevoguefashion.com/fashion/${post.slug}`,
+      author: {
+        '@type': 'Organization',
+        name: 'StyleVogue Editorial Team'
+      }
+    }))
   }
 
   return (
     <>
-     
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      
+      {/* Enhanced SEO Structured Data */}
+      <StructuredData data={[organizationSchema, websiteSchema, blogSchema]} />
+
       {/* Hero Section with Gradient Background */}
       <section className="relative bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600 text-white py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -64,19 +84,19 @@ export default async function Home() {
               Your ultimate fashion destination for the latest trends, expert style tips, and wardrobe essentials. Transform your look with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <Link 
+              <Link
                 href="/fashion"
                 className="bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl hover:shadow-2xl"
               >
                 Explore Fashion
               </Link>
-              <Link 
+              <Link
                 href="/fashion/trends"
                 className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-pink-600 transition-all hover:scale-105"
               >
                 Latest Trends
               </Link>
-              <Link 
+              <Link
                 href="/products"
                 className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-pink-600 transition-all hover:scale-105"
               >
@@ -97,7 +117,7 @@ export default async function Home() {
               { number: '100+', label: 'Style Tips' },
               { number: '24/7', label: 'Fresh Content' },
             ].map((stat, index) => (
-              <div 
+              <div
                 key={stat.label}
                 className="text-center animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -112,7 +132,7 @@ export default async function Home() {
 
       <div className="container mx-auto px-4 py-12">
 
-      {/* Featured Posts Grid */}
+        {/* Featured Posts Grid */}
         <section className="mb-20">
           <div className="text-center mb-12 animate-fade-in">
             <span className="text-pink-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Hot Right Now</span>
@@ -123,10 +143,10 @@ export default async function Home() {
               Discover the most talked-about fashion trends and style tips that everyone is wearing this week
             </p>
           </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPosts.map((post, index) => (
-              <Link 
-                key={post.id} 
+              <Link
+                key={post.id}
                 href={`/fashion/${post.slug}`}
                 className={`animate-fade-in`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -138,23 +158,23 @@ export default async function Home() {
                         Trending
                       </span>
                     </div>
-                  <Image
-                    src={post.image}
-                    alt={`${post.title} - ${post.category} fashion trend image`}
-                    fill
+                    <Image
+                      src={post.image}
+                      alt={`${post.title} - ${post.category} fashion trend image`}
+                      fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="p-6">
+                    />
+                  </div>
+                  <div className="p-6">
                     <span className="text-sm text-pink-600 font-semibold inline-block mb-2 uppercase tracking-wide">
-                    {post.category}
-                  </span>
+                      {post.category}
+                    </span>
                     <h3 className="text-2xl font-bold mt-2 mb-3 text-gray-900 group-hover:text-pink-600 transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
+                      {post.title}
+                    </h3>
                     <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
-                    {post.excerpt}
-                  </p>
+                      {post.excerpt}
+                    </p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                       <span className="text-sm text-gray-500 flex items-center">
                         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,18 +183,18 @@ export default async function Home() {
                         {post.date}
                       </span>
                       <span className="text-pink-600 font-semibold group-hover:translate-x-2 transition-transform inline-flex items-center">
-                        Read More 
+                        Read More
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </span>
                     </div>
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
-      </section>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* Featured Categories with Icons */}
         <section className="mb-20 animate-fade-in">
@@ -189,30 +209,30 @@ export default async function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              { 
-                name: 'Trending', 
-                href: '/fashion/trends', 
+              {
+                name: 'Trending',
+                href: '/fashion/trends',
                 icon: '🔥',
                 desc: 'Latest trends',
                 color: 'from-pink-500 to-rose-500'
               },
-              { 
-                name: 'Style Tips', 
-                href: '/fashion/style-tips', 
+              {
+                name: 'Style Tips',
+                href: '/fashion/style-tips',
                 icon: '✨',
                 desc: 'Expert advice',
                 color: 'from-purple-500 to-indigo-500'
               },
-              { 
-                name: 'Accessories', 
-                href: '/fashion?category=accessories', 
+              {
+                name: 'Accessories',
+                href: '/fashion?category=accessories',
                 icon: '💍',
                 desc: 'Complete the look',
                 color: 'from-blue-500 to-cyan-500'
               },
-              { 
-                name: 'Essentials', 
-                href: '/fashion?category=wardrobe-essentials', 
+              {
+                name: 'Essentials',
+                href: '/fashion?category=wardrobe-essentials',
                 icon: '👗',
                 desc: 'Must-haves',
                 color: 'from-teal-500 to-green-500'
@@ -314,7 +334,7 @@ export default async function Home() {
                   desc: 'Stay ahead of the curve with our early trend spotting and analysis of upcoming fashion movements.'
                 }
               ].map((feature, index) => (
-                <div 
+                <div
                   key={feature.title}
                   className="bg-white rounded-2xl p-8 hover-lift shadow-lg animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -414,19 +434,19 @@ export default async function Home() {
               Join thousands of fashion enthusiasts and start your style journey today. Discover trends, get expert tips, and build the wardrobe of your dreams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/fashion"
                 className="bg-white text-pink-600 px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl inline-block"
               >
                 Browse Fashion Posts
               </Link>
-              <Link 
+              <Link
                 href="/products"
                 className="bg-white text-pink-600 px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl inline-block"
               >
                 View Products
               </Link>
-              <Link 
+              <Link
                 href="/about"
                 className="bg-transparent border-2 border-white text-white px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-pink-600 transition-all inline-block"
               >
