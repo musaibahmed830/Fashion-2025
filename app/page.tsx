@@ -41,12 +41,7 @@ export default async function Home() {
 
   return (
     <>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
-        crossOrigin="anonymous"
-        strategy="afterInteractive" // Loads script after hydration, ideal for ads
-      />
+     
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
