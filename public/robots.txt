@@ -1,4 +1,3 @@
-# *
 User-agent: *
 Allow: /
 Disallow: /color/*/feed/
@@ -8,10 +7,5 @@ Disallow: /wp-content/
 Disallow: /wp-admin/
 Disallow: /feed/
 Disallow: /*/feed/
-Disallow: /api/
 
-# Host
-Host: https://stylevoguefashion.com
-
-# Sitemaps
 Sitemap: https://stylevoguefashion.com/sitemap.xml
