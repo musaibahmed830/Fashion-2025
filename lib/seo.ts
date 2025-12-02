@@ -143,5 +143,5 @@ export function extractKeywords(content: string, existing: string[] = []): strin
         .slice(0, 10)
         .map(([word]) => word)
 
-    return [...new Set([...existing, ...sorted])]
+    return Array.from(new Set([...existing, ...sorted]))
 }
