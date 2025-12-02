@@ -1,9 +1,6 @@
-/** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://stylevoguefashion.com',
   generateRobotsTxt: true,
-  generateIndexSitemap: false,
-  exclude: ['/server-sitemap-index.xml'],
   robotsTxtOptions: {
     policies: [
       {
@@ -17,12 +14,9 @@ module.exports = {
           '/wp-admin/',
           '/feed/',
           '/*/feed/',
-        ],
+        ]
       },
     ],
-    additionalSitemaps: [
-      'https://stylevoguefashion.com/sitemap.xml',
-    ],
+    sitemap: 'https://stylevoguefashion.com/sitemap.xml'
   },
-}
-
+};
