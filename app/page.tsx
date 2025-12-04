@@ -252,6 +252,128 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* Emerging Trends & News Section */}
+        <section className="mb-20 animate-fade-in">
+          <div className="text-center mb-12">
+            <span className="text-pink-600 font-semibold uppercase tracking-wider text-sm mb-2 block">What's New</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Emerging Trends & <span className="gradient-text">Fashion News</span>
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Stay ahead with the latest breaking fashion news, innovations, and trends shaping the industry
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* AI Fashion Card */}
+            <article className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 sm:p-8 hover-lift hover-glow border border-purple-100 animate-scale-in" style={{ animationDelay: '0s' }}>
+              <div className="text-5xl sm:text-6xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">AI-Driven Fashion</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                World's first AI-driven shoppable catwalk featuring Topshop on February 26, 2026. The future of fashion is here!
+              </p>
+              <Link
+                href="/fashion/ai-driven-fashion-shoppable-catwalk-2026"
+                className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
+              >
+                Read more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </article>
+
+            {/* Sustainability Card */}
+            <article className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 sm:p-8 hover-lift hover-glow border border-green-100 animate-scale-in" style={{ animationDelay: '0.1s' }}>
+              <div className="text-5xl sm:text-6xl mb-4">🌱</div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">Sustainable Innovation</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Stella McCartney pioneers plant-based materials and eco-friendly alternatives transforming luxury fashion.
+              </p>
+              <Link
+                href="/fashion/stella-mccartney-sustainable-plant-based-materials"
+                className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
+              >
+                Read more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </article>
+
+            {/* Comfort Revolution Card */}
+            <article className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 sm:p-8 hover-lift hover-glow border border-amber-100 animate-scale-in" style={{ animationDelay: '0.2s' }}>
+              <div className="text-5xl sm:text-6xl mb-4">👔</div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">Comfort Revolution</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Looser fits and natural materials reign supreme. Discover why comfort is the new luxury in 2026.
+              </p>
+              <Link
+                href="/fashion/comfort-revolution-loose-fits-natural-materials"
+                className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
+              >
+                Read more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </article>
+
+            {/* 70/30 Rule Card */}
+            <article className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 sm:p-8 hover-lift hover-glow border border-pink-100 animate-scale-in" style={{ animationDelay: '0.3s' }}>
+              <div className="text-5xl sm:text-6xl mb-4">📐</div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">The 70/30 Wardrobe Rule</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Master the perfect balance: 70% timeless basics, 30% trend pieces. Build a sustainable, stylish closet.
+              </p>
+              <Link
+                href="/fashion/70-30-wardrobe-rule-guide"
+                className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
+              >
+                Read more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </article>
+
+            {/* Celebrity Fashion Card */}
+            <article className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-6 sm:p-8 hover-lift hover-glow border border-violet-100 animate-scale-in" style={{ animationDelay: '0.4s' }}>
+              <div className="text-5xl sm:text-6xl mb-4">⭐</div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">Celebrity Style Spotlight</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Doja Cat showcases Pakistani brand Warp, highlighting the global future of celebrity fashion.
+              </p>
+              <Link
+                href="/fashion/celebrity-fashion-doja-cat-fenty-warp"
+                className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
+              >
+                Read more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </article>
+
+            {/* General News Card */}
+            <article className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-6 sm:p-8 hover-lift hover-glow border border-cyan-100 animate-scale-in" style={{ animationDelay: '0.5s' }}>
+              <div className="text-5xl sm:text-6xl mb-4">📰</div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">More Fashion News</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Discover Paris Fashion Week highlights, new designers, and the latest runway trends from around the world.
+              </p>
+              <Link
+                href="/fashion"
+                className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
+              >
+                View all posts
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </article>
+          </div>
+        </section>
+
         {/* Latest Trend News Section */}
         <LatestTrendNews />
 

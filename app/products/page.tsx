@@ -149,14 +149,146 @@ const bestSellingProducts: Product[] = [
     rating: 4.8,
     price: '$89.99',
   },
+  {
+    id: '13',
+    name: 'Elegant Lace Winter Wedding Dress',
+    category: 'Wedding',
+    description: 'Stunning floor-length wedding gown featuring intricate lace detailing and long sleeves. Perfect for winter ceremonies with its sophisticated design, cathedral train, and timeless ivory color. Made from premium lace and satin for a luxurious feel.',
+    use: 'Ideal for winter and fall weddings, both indoor and outdoor ceremonies. The long sleeves provide warmth and elegance while the flowing train creates a dramatic entrance. Perfect for traditional church weddings, garden ceremonies, or elegant ballroom receptions. Can be paired with a veil and statement jewelry for a complete bridal look.',
+    image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80',
+    features: ['Premium Lace & Satin', 'Long Sleeves', 'Cathedral Train', 'Ivory Color', 'Custom Fit Available'],
+    rating: 4.9,
+    price: '$899.99',
+  },
+  {
+    id: '14',
+    name: 'Velvet A-Line Wedding Gown',
+    category: 'Wedding',
+    description: 'Luxurious velvet wedding dress with A-line silhouette and V-neckline. Features rich texture perfect for cold-weather weddings, fitted bodice, and flowing skirt. The deep burgundy or ivory velvet creates a regal, sophisticated look.',
+    use: 'Perfect for winter weddings, especially December and January ceremonies. The velvet fabric provides warmth while maintaining bridal elegance. Ideal for intimate ceremonies, destination winter weddings, or non-traditional brides seeking unique style. Works beautifully in rustic venues, historic estates, or modern ballrooms.',
+    image: 'https://images.unsplash.com/photo-1594552072238-5cdae25e71e0?w=800&q=80',
+    features: ['Luxe Velvet Fabric', 'A-Line Silhouette', 'V-Neckline', 'Multiple Colors', 'Winter-Ready'],
+    rating: 4.8,
+    price: '$749.99',
+  },
+  {
+    id: '15',
+    name: 'Classic Satin Ball Gown Wedding Dress',
+    category: 'Wedding',
+    description: 'Timeless ball gown wedding dress in luxurious satin with off-shoulder neckline. Features a fitted bodice with boning, full skirt with layers of tulle, and elegant train. The classic silhouette flatters all body types.',
+    use: 'Perfect for formal winter weddings and grand ballroom receptions. The off-shoulder design adds romance while the full skirt creates a princess-like appearance. Ideal for traditional ceremonies, black-tie weddings, or brides wanting a fairytale moment. The layers provide warmth for winter events while maintaining an elegant silhouette.',
+    image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80',
+    features: ['Premium Satin', 'Ball Gown Silhouette', 'Off-Shoulder Design', 'Layered Tulle Skirt', 'Boned Bodice'],
+    rating: 4.9,
+    price: '$649.99',
+  },
+  {
+    id: '16',
+    name: 'Modern Minimalist Wedding Dress',
+    category: 'Wedding',
+    description: 'Contemporary wedding dress with clean lines and minimal embellishment. Features long sleeves, subtle V-back, and column silhouette in soft crepe fabric. The understated elegance appeals to modern brides seeking simplicity.',
+    use: 'Ideal for modern, minimalist weddings and contemporary brides. Perfect for city hall ceremonies, intimate gatherings, or second weddings. The long sleeves make it suitable for winter events while the simple design allows accessories to shine. Works beautifully in urban venues, art galleries, or minimalist settings.',
+    image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80',
+    features: ['Clean Modern Design', 'Long Sleeves', 'Crepe Fabric', 'V-Back Detail', 'Column Silhouette'],
+    rating: 4.7,
+    price: '$399.99',
+  },
+  {
+    id: '17',
+    name: 'Sequin Cocktail Party Dress',
+    category: 'Party Wear',
+    description: 'Glamorous cocktail dress covered in shimmering sequins with a fitted silhouette. Features a flattering V-neckline, sleeveless design, and knee-length hem. Perfect for making a statement at holiday parties and celebrations.',
+    use: 'Perfect for New Year\'s Eve parties, holiday celebrations, cocktail events, and night-out occasions. The sequins catch the light beautifully for photos and dancing. Ideal for festive gatherings, birthday parties, anniversary celebrations, or any event where you want to sparkle. Pair with heels and minimal jewelry for maximum impact.',
+    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=800&q=80',
+    features: ['Full Sequin Coverage', 'Fitted Silhouette', 'V-Neckline', 'Knee-Length', 'Party-Ready'],
+    rating: 4.8,
+    price: '$249.99',
+  },
+  {
+    id: '18',
+    name: 'Velvet Wrap Party Dress',
+    category: 'Party Wear',
+    description: 'Rich velvet wrap dress with flattering tie-waist and three-quarter sleeves. The wrap design creates a feminine silhouette while the luxe velvet adds sophistication. Available in jewel tones perfect for winter celebrations.',
+    use: 'Ideal for Christmas parties, winter weddings as a guest, holiday office parties, and festive dinners. The wrap style flatters various body types and the velvet fabric provides warmth for cold-weather events. Perfect for celebrations from November through February. Can be dressed up with heels or down with boots.',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=800&q=80',
+    features: ['Luxe Velvet Fabric', 'Wrap Design', 'Three-Quarter Sleeves', 'Tie Waist', 'Jewel Tones'],
+    rating: 4.7,
+    price: '$189.99',
+  },
+  {
+    id: '19',
+    name: 'Satin Slip Party Dress',
+    category: 'Party Wear',
+    description: 'Elegant satin slip dress with adjustable straps and cowl neckline. The bias-cut silhouette drapes beautifully and the midi length is sophisticated and versatile. The lustrous fabric catches the light elegantly.',
+    use: 'Perfect for cocktail parties, dinner dates, holiday gatherings, and semi-formal events. The slip dress can be layered with a blazer for cooler evenings or worn alone for indoor parties. Ideal for New Year\'s celebrations, gallery openings, or upscale restaurant reservations. Easy to style with various accessories for different looks.',
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=80',
+    features: ['Satin Fabric', 'Adjustable Straps', 'Cowl Neckline', 'Bias Cut', 'Midi Length'],
+    rating: 4.6,
+    price: '$129.99',
+  },
+  {
+    id: '20',
+    name: 'Metallic Midi Party Dress',
+    category: 'Party Wear',
+    description: 'Eye-catching metallic midi dress with a modern fit-and-flare silhouette. Features short sleeves, round neckline, and shimmering fabric that creates a festive look. Budget-friendly option for party season.',
+    use: 'Great for office holiday parties, casual New Year\'s gatherings, birthday celebrations, and festive get-togethers. The metallic fabric adds sparkle without being overly formal. Perfect for those wanting a party look on a budget. Can be styled with tights for warmth or worn alone for milder winter climates.',
+    image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=800&q=80',
+    features: ['Metallic Fabric', 'Fit-and-Flare', 'Short Sleeves', 'Midi Length', 'Budget-Friendly'],
+    rating: 4.6,
+    price: '$89.99',
+  },
+  {
+    id: '21',
+    name: 'Luxe Faux Fur Coat',
+    category: 'Winter Jackets',
+    description: 'Statement-making full-length faux fur coat in premium quality synthetic fur. Features a luxurious collar, hook-and-eye closure, and dramatic volume. Available in classic colors including ivory, black, and camel.',
+    use: 'Perfect for making a grand entrance at winter weddings, holiday parties, and special events. Provides exceptional warmth for outdoor winter activities while maintaining glamorous style. Ideal for layering over evening dresses, wedding attire, or elevating casual outfits. Can be worn to the theater, upscale restaurants, or any occasion requiring sophisticated outerwear.',
+    image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80',
+    features: ['Premium Faux Fur', 'Full Length', 'Luxe Collar', 'Hook Closure', 'Statement Piece'],
+    rating: 4.9,
+    price: '$329.99',
+  },
+  {
+    id: '22',
+    name: 'Wool Blend Peacoat',
+    category: 'Winter Jackets',
+    description: 'Classic double-breasted peacoat in premium wool blend fabric. Features a tailored fit, notched lapels, side pockets, and timeless military-inspired design. The versatile style works for both casual and professional settings.',
+    use: 'Essential winter jacket for daily wear, commuting, and professional environments. The peacoat style is appropriate for business settings, casual weekends, and everything in between. Perfect for temperatures from fall through spring. Can be worn over suits, casual outfits, or dresses. A timeless investment that works for multiple seasons and years.',
+    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80',
+    features: ['Wool Blend', 'Double-Breasted', 'Tailored Fit', 'Side Pockets', 'Classic Design'],
+    rating: 4.8,
+    price: '$249.99',
+  },
+  {
+    id: '23',
+    name: 'Quilted Puffer Jacket',
+    category: 'Winter Jackets',
+    description: 'Warm quilted puffer jacket with water-resistant exterior and synthetic insulation. Features a hood, zip pockets, and adjustable hem. The practical design provides maximum warmth without sacrificing style.',
+    use: 'Ideal for cold winter days, outdoor activities, travel, and casual everyday wear. The water-resistant fabric protects from snow and light rain while the insulation keeps you warm in freezing temperatures. Perfect for ski trips, winter hiking, daily errands, or commuting in harsh weather. Works with jeans, leggings, or casual pants.',
+    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80',
+    features: ['Water-Resistant', 'Synthetic Insulation', 'Hood', 'Zip Pockets', 'Adjustable Hem'],
+    rating: 4.7,
+    price: '$149.99',
+  },
+  {
+    id: '24',
+    name: 'Sherpa-Lined Denim Jacket',
+    category: 'Winter Jackets',
+    description: 'Trendy denim jacket with cozy sherpa lining throughout. Features a classic denim exterior, button closure, chest pockets, and warm fleece interior. The perfect combination of style and comfort for mild winter days.',
+    use: 'Perfect for layering during fall and mild winter days. Great for casual outings, weekend activities, and creating effortlessly cool looks. Can be worn over sweaters, hoodies, or long-sleeve shirts. Ideal for transitional weather, concerts, casual gatherings, or adding a relaxed vibe to any outfit. Works well with jeans, skirts, or dresses.',
+    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80',
+    features: ['Denim Exterior', 'Sherpa Lining', 'Button Closure', 'Chest Pockets', 'Trendy Style'],
+    rating: 4.8,
+    price: '$179.99',
+  },
 ]
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All Products')
   const categories = ['All Products', ...Array.from(new Set(bestSellingProducts.map(p => p.category)))]
-  
-  const filteredProducts = selectedCategory === 'All Products' 
-    ? bestSellingProducts 
+
+  const filteredProducts = selectedCategory === 'All Products'
+    ? bestSellingProducts
     : bestSellingProducts.filter(p => p.category === selectedCategory)
 
   return (
@@ -189,11 +321,10 @@ export default function ProductsPage() {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-6 py-2 rounded-full font-semibold transition-colors ${
-              selectedCategory === category
+            className={`px-6 py-2 rounded-full font-semibold transition-colors ${selectedCategory === category
                 ? 'bg-pink-600 text-white hover:bg-pink-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-pink-100 hover:text-pink-600'
-            }`}
+              }`}
           >
             {category}
           </button>
@@ -229,7 +360,7 @@ export default function ProductsPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="p-6">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-pink-600 font-semibold uppercase tracking-wide">
@@ -239,11 +370,11 @@ export default function ProductsPage() {
                   <span className="text-lg font-bold text-gray-900">{product.price}</span>
                 )}
               </div>
-              
+
               <h2 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-pink-600 transition-colors">
                 {product.name}
               </h2>
-              
+
               <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
                 {product.description}
               </p>
@@ -289,9 +420,9 @@ export default function ProductsPage() {
       {/* SEO Content Section */}
       <section className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 sm:p-8 md:p-12 animate-fade-in">
         <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Best Selling Fashion Products for Your Wardrobe
-            </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Best Selling Fashion Products for Your Wardrobe
+          </h2>
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="mb-4">
               Our curated collection of best-selling products represents the most popular and highly-rated fashion items that have proven their value to thousands of customers. These products are selected based on quality, versatility, customer satisfaction, and timeless design.
