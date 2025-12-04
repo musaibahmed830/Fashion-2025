@@ -11,8 +11,8 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50 animate-fade-in">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="flex items-center gap-3 animate-scale-in hover:scale-105 transition-transform group"
           >
             <div className="relative w-12 h-12 md:w-16 md:h-16">
@@ -21,6 +21,7 @@ export default function Header() {
                 alt="Style Vogue Fashion Logo - Latest Trends & Beauty Tips"
                 fill
                 className="object-contain"
+                sizes="(max-width: 768px) 48px, 64px"
                 priority
               />
             </div>

@@ -160,7 +160,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductById(params.id)
-  
+
   if (!product) {
     return {
       title: 'Product Not Found'
@@ -194,8 +194,8 @@ export default function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-6xl">
-      <Link 
-        href="/products" 
+      <Link
+        href="/products"
         className="text-pink-600 hover:text-pink-700 hover:underline mb-6 inline-block transition-colors animate-fade-in"
       >
         ← Back to Products

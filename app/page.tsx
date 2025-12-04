@@ -163,6 +163,7 @@ export default async function Home() {
                       alt={`${post.title} - ${post.category} fashion trend image`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   <div className="p-6">
@@ -403,6 +404,7 @@ export default async function Home() {
                       alt={`${post.title} - Latest fashion post image`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   <div className="p-5">

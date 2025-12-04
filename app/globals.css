@@ -254,4 +254,45 @@ button, a, .transition-all {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Accessibility Fixes for Consent Dialog */
+/* Fix low contrast issues in Google FundingChoices consent dialog */
+.fc-consent-root {
+  font-family: inherit !important;
+}
+
+.fc-consent-root .fc-dialog {
+  color: #1a1a1a !important;
+}
+
+.fc-consent-root .fc-dialog-content,
+.fc-consent-root .fc-message-container {
+  color: #1a1a1a !important;
+}
+
+.fc-consent-root .fc-vendors-list-dialog,
+.fc-consent-root a {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
+.fc-consent-root .fc-vendors-list-dialog:hover,
+.fc-consent-root a:hover {
+  color: #004499 !important;
+}
+
+.fc-consent-root .fc-button {
+  background-color: #ec4899 !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.fc-consent-root .fc-button:hover {
+  background-color: #db2777 !important;
+}
+
+.fc-consent-root .fc-faq-label {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+}
 
