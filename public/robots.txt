@@ -1,11 +1,26 @@
 User-agent: *
 Allow: /
-Disallow: /color/*/feed/
-Disallow: /manufacturer/*/feed/
-Disallow: /size/*/feed/
+
+# Block WordPress legacy paths
 Disallow: /wp-content/
 Disallow: /wp-admin/
 Disallow: /feed/
 Disallow: /*/feed/
+
+# Block color filter pages (legacy WordPress)
+Disallow: /color/
+
+# Block manufacturer filter pages (legacy WordPress)
+Disallow: /manufacturer/
+
+# Block size filter pages (legacy WordPress)
+Disallow: /size/
+
+# Block logout and authentication pages
+Disallow: /logout/
+Disallow: /login/
+
+# Block API routes
+Disallow: /api/
 
 Sitemap: https://stylevoguefashion.com/sitemap.xml

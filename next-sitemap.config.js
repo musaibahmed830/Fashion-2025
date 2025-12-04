@@ -3,20 +3,30 @@ module.exports = {
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://stylevoguefashion.com',
     generateRobotsTxt: true,
     generateIndexSitemap: false,
-    exclude: ['/api/*', '/server-sitemap.xml'],
+    exclude: [
+        '/api/*',
+        '/server-sitemap.xml',
+        '/color/*',
+        '/manufacturer/*',
+        '/size/*',
+        '/logout/*',
+        '/login/*'
+    ],
     robotsTxtOptions: {
         policies: [
             {
                 userAgent: '*',
                 allow: '/',
                 disallow: [
-                    '/color/*/feed/',
-                    '/manufacturer/*/feed/',
-                    '/size/*/feed/',
                     '/wp-content/',
                     '/wp-admin/',
                     '/feed/',
                     '/*/feed/',
+                    '/color/',
+                    '/manufacturer/',
+                    '/size/',
+                    '/logout/',
+                    '/login/',
                     '/api/'
                 ]
             }
