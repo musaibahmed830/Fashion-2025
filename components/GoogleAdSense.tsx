@@ -9,7 +9,7 @@ export default function GoogleAdSense() {
         <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             crossOrigin="anonymous"
             onError={(e) => {
                 console.error('AdSense script failed to load:', e)
