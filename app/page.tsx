@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: 'Discover the latest fashion trends, beauty tips, and style guides at StyleVogue',
     type: 'website',
     url: 'https://stylevoguefashion.com/',
+    images: ['/logo.png'],
   },
 }
 

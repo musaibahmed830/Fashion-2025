@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import StructuredData from '@/components/StructuredData'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Best Selling Products - Top Fashion Items | StyleVogue',
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
     title: 'Best Selling Products - Top Fashion Items',
     description: 'Discover the best selling fashion products, accessories, and beauty items with detailed descriptions and uses',
     url: 'https://stylevoguefashion.com/products',
+    images: ['/logo.png'],
   },
 }
 
@@ -19,6 +22,16 @@ export default function ProductsLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://stylevoguefashion.com' },
+    { name: 'Products', url: 'https://stylevoguefashion.com/products' },
+  ])
+
+  return (
+    <>
+      <StructuredData data={breadcrumbSchema} />
+      {children}
+    </>
+  )
 }
 

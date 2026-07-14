@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Terms & Conditions - StyleVogue | Website Terms',
     description: 'Read the Terms & Conditions for StyleVogue',
     url: 'https://stylevoguefashion.com/terms',
+    images: ['/logo.png'],
   },
 }
 

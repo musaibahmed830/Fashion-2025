@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy - StyleVogue | Data Protection',
     description: 'Learn how StyleVogue collects, uses, and protects your personal information',
     url: 'https://stylevoguefashion.com/privacy',
+    images: ['/logo.png'],
   },
 }
 

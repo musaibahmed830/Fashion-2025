@@ -44,11 +44,20 @@ export const metadata: Metadata = {
     siteName: 'StyleVogue',
     title: 'StyleVogue - Fashion Trends & Style Guide 2026',
     description: 'Discover the latest fashion trends, style tips, and wardrobe essentials for 2026',
+    images: [
+      {
+        url: '/logo.png',
+        width: 600,
+        height: 600,
+        alt: 'StyleVogue - Fashion Trends & Style Guide',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'StyleVogue - Fashion Trends & Style Tips',
     description: 'Your ultimate guide to staying stylish in 2026',
+    images: ['/logo.png'],
   },
   robots: {
     index: true,

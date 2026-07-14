@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: 'Style Tips & Fashion Advice - Expert Guide',
     description: 'Expert style tips and fashion advice for building the perfect wardrobe',
     url: 'https://stylevoguefashion.com/fashion/style-tips',
+    images: ['/logo.png'],
   },
 }
 

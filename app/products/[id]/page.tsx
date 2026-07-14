@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import StructuredData from '@/components/StructuredData'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 interface Product {
   id: string
@@ -330,8 +332,35 @@ export default function ProductDetailPage({ params }: Props) {
     notFound()
   }
 
+  const canonicalUrl = `https://stylevoguefashion.com/products/${params.id}`
+
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description,
+    image: product.image,
+    category: product.category,
+    url: canonicalUrl,
+    ...(product.price && {
+      offers: {
+        '@type': 'Offer',
+        price: product.price.replace(/[^0-9.]/g, ''),
+        priceCurrency: 'USD',
+        url: canonicalUrl,
+      },
+    }),
+  }
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://stylevoguefashion.com' },
+    { name: 'Products', url: 'https://stylevoguefashion.com/products' },
+    { name: product.name, url: canonicalUrl },
+  ])
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <StructuredData data={[productSchema, breadcrumbSchema]} />
       <Link
         href="/products"
         className="text-pink-600 hover:text-pink-700 hover:underline mb-6 inline-block transition-colors animate-fade-in"

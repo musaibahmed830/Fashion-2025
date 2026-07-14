@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Contact StyleVogue - Get in Touch',
     description: 'Contact StyleVogue for fashion inquiries, partnership opportunities, or general questions',
     url: 'https://stylevoguefashion.com/contact',
+    images: ['/logo.png'],
   },
 }
 

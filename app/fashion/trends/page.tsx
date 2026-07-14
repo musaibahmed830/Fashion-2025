@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: 'Fashion Trends 2026 - Latest Style Trends',
     description: 'Explore the latest fashion trends for 2026 including boho chic, Y2K revival, Gen Z and Gen Alpha fashion, and 90s style comeback',
     url: 'https://stylevoguefashion.com/fashion/trends',
+    images: ['/logo.png'],
   },
 }
 

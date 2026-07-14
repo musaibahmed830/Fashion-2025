@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getAllPosts } from '@/lib/posts'
 import { Metadata } from 'next'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Fashion Posts - Style Guides & Trends | StyleVogue',
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     title: 'Fashion Posts - Style Guides & Trends',
     description: 'Browse all fashion posts covering the latest trends, style tips, and wardrobe essentials',
     url: 'https://stylevoguefashion.com/fashion',
+    images: ['/logo.png'],
   },
 }
 
@@ -25,14 +27,19 @@ export default function FashionPage() {
     '@type': 'CollectionPage',
     name: 'All Fashion Posts',
     description: 'Complete collection of fashion articles and style guides',
-    url: 'https://stylevogue.com/fashion',
+    url: 'https://stylevoguefashion.com/fashion',
   }
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://stylevoguefashion.com' },
+    { name: 'Fashion', url: 'https://stylevoguefashion.com/fashion' },
+  ])
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbSchema]) }}
       />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-fade-in">

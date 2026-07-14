@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'About StyleVogue - Fashion Blog & Style Tips',
     description: 'Learn about StyleVogue, your premier source for the latest fashion trends and expert style tips',
     url: 'https://stylevoguefashion.com/about',
+    images: ['/logo.png'],
   },
 }
 
