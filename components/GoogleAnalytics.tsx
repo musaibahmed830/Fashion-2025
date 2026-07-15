@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import Script from 'next/script'
 import PageViewTracker from './PageViewTracker'
 
@@ -26,7 +27,9 @@ export default function GoogleAnalytics() {
           `,
         }}
       />
-      <PageViewTracker />
+      <Suspense fallback={null}>
+        <PageViewTracker />
+      </Suspense>
     </>
   )
 }
