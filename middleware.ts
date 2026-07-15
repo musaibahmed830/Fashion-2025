@@ -1,8 +1,43 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+function isAuthorized(request: NextRequest): boolean {
+    const expectedUser = process.env.ADMIN_USERNAME
+    const expectedPass = process.env.ADMIN_PASSWORD
+
+    if (!expectedUser || !expectedPass) {
+        // No credentials configured - fail closed rather than leaving the page open.
+        return false
+    }
+
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader || !authHeader.startsWith('Basic ')) {
+        return false
+    }
+
+    const decoded = atob(authHeader.replace('Basic ', ''))
+    const [user, pass] = decoded.split(':')
+    return user === expectedUser && pass === expectedPass
+}
+
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl
+
+    // Password-protect internal admin/reporting pages
+    if (pathname.startsWith('/admin')) {
+        if (!isAuthorized(request)) {
+            return new NextResponse('Authentication required', {
+                status: 401,
+                headers: {
+                    'WWW-Authenticate': 'Basic realm="Admin"',
+                    'X-Robots-Tag': 'noindex, nofollow',
+                },
+            })
+        }
+        const response = NextResponse.next()
+        response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+        return response
+    }
 
     // List of legacy WordPress paths that should return 410 Gone
     const legacyPaths = [
