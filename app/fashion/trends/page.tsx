@@ -26,7 +26,7 @@ export default function TrendsPage() {
     '@type': 'CollectionPage',
     name: 'Fashion Trends 2026',
     description: 'Latest fashion trends and style movements for 2026',
-    url: 'https://stylevogue.com/fashion/trends',
+    url: 'https://stylevoguefashion.com/fashion/trends',
   }
 
   return (
@@ -89,7 +89,7 @@ export default function TrendsPage() {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.date}</span>
                       <span className="text-pink-600 font-semibold group-hover:translate-x-2 transition-transform inline-block">
-                        Read More →
+                        Read More<span className="sr-only"> about {post.title}</span> →
                       </span>
                     </div>
                   </div>

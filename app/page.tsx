@@ -77,14 +77,14 @@ export default async function Home() {
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }}></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-slide-in-left">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               StyleVogue – Latest Trends & Style Tips for <span className="text-yellow-300">2026</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 leading-relaxed animate-slide-in-right px-4">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 leading-relaxed px-4">
               Your ultimate fashion destination for the latest trends, expert style tips, and wardrobe essentials. Transform your look with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/fashion"
                 className="bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl hover:shadow-2xl"
@@ -185,7 +185,7 @@ export default async function Home() {
                         {post.date}
                       </span>
                       <span className="text-pink-600 font-semibold group-hover:translate-x-2 transition-transform inline-flex items-center">
-                        Read More
+                        Read More<span className="sr-only"> about {post.title}</span>
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -277,7 +277,7 @@ export default async function Home() {
                 href="/fashion/ai-driven-fashion-shoppable-catwalk-2026"
                 className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
               >
-                Read more
+                Read more<span className="sr-only"> about AI-Driven Fashion</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -295,7 +295,7 @@ export default async function Home() {
                 href="/fashion/stella-mccartney-sustainable-plant-based-materials"
                 className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
               >
-                Read more
+                Read more<span className="sr-only"> about Sustainable Innovation</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -313,7 +313,7 @@ export default async function Home() {
                 href="/fashion/comfort-revolution-loose-fits-natural-materials"
                 className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
               >
-                Read more
+                Read more<span className="sr-only"> about Comfort Revolution</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -331,7 +331,7 @@ export default async function Home() {
                 href="/fashion/70-30-wardrobe-rule-guide"
                 className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
               >
-                Read more
+                Read more<span className="sr-only"> about The 70/30 Wardrobe Rule</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -349,7 +349,7 @@ export default async function Home() {
                 href="/fashion/celebrity-fashion-doja-cat-fenty-warp"
                 className="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors"
               >
-                Read more
+                Read more<span className="sr-only"> about Celebrity Style Spotlight</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -575,7 +575,7 @@ export default async function Home() {
                 href="/about"
                 className="bg-transparent border-2 border-white text-white px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-pink-600 transition-all inline-block"
               >
-                Learn More
+                Learn More<span className="sr-only"> About StyleVogue</span>
               </Link>
             </div>
           </div>

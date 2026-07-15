@@ -26,7 +26,7 @@ export default function StyleTipsPage() {
     '@type': 'CollectionPage',
     name: 'Style Tips & Fashion Advice',
     description: 'Expert style tips and fashion advice for every occasion',
-    url: 'https://stylevogue.com/fashion/style-tips',
+    url: 'https://stylevoguefashion.com/fashion/style-tips',
   }
 
   return (
@@ -89,7 +89,7 @@ export default function StyleTipsPage() {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.date}</span>
                       <span className="text-pink-600 font-semibold group-hover:translate-x-2 transition-transform inline-block">
-                        Read More →
+                        Read More<span className="sr-only"> about {post.title}</span> →
                       </span>
                     </div>
                   </div>
