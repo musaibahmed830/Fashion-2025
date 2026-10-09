@@ -8,7 +8,7 @@ import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'StyleVogue - Latest Fashion Trends & Style Tips 2026',
-  description: 'Discover the latest fashion trends, beauty tips, and style guides at StyleVogue. Expert advice on wardrobe essentials, sustainable fashion, and celebrity style inspiration.',
+  description: 'Discover 2026 Pakistani fashion trends at StyleVogue. Get expert style tips, beauty guides, and wardrobe essentials for a celebrity-inspired look.',
   keywords: 'StyleVogue, fashion trends, beauty tips, style guides, fashion blog, wardrobe essentials, sustainable fashion, celebrity style, fashion tips',
   alternates: {
     canonical: 'https://stylevoguefashion.com/',
